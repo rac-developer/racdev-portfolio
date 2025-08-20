@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Youtube() {
+const Youtube = () => {
   return (
     <div>
       

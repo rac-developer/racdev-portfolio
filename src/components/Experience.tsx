@@ -1,9 +1,38 @@
+import {work} from "@/database/data.json"
+
+interface Work {
+  name: string,
+  startDate: string | number,
+  endDate: string | number | null,
+  position: string,
+  summary: string | string[],
+  skills: string | string[],
+  description: string
+}
+
 import React from 'react'
 
-function Experience() {
+const Experience = () => {
   return (
-    <div>
-      3
+    <div className="relative">
+      <h1 className="font-bold text-4xl">Experencia</h1>
+      <ul className="space-y-4">
+        {work.map(({name, startDate, endDate, position}: Work, idx) => {
+          const startYear = new Date(startDate).getFullYear()
+          const endYear = endDate ? new Date(endDate).getFullYear() : "Actualmente"
+          const years = `${startYear} - ${endYear}`
+
+          return (
+            <li key={name + years + idx}>
+              <article className="text-black">
+                <h3>{name}</h3>
+                <h4>{position}</h4>
+                <time>{years}</time>
+              </article>
+            </li>
+          )
+        })}
+      </ul>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SocialMedia() {
+const SocialMedia = () => {
   return (
     <div>
       

@@ -1,11 +1,12 @@
 import React from 'react'
 
-function Proyects() {
+const Proyects = () => {
   return (
     <div>
-      4
+      
     </div>
   )
 }
 
 export default Proyects
+

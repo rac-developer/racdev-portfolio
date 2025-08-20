@@ -1,0 +1,228 @@
+{
+    "basics": {
+      "name": "Rodolfo Alejandro Castro",
+      "layout": "Desarrollador Front-End",
+      "label": "Estudiante de ingeniería enfocado en el desarrollo de productos de alta calidad.",
+      "image": "",
+      "email": "soyracm@gmail.com",
+      "phone": "",
+      "url": "https://cv-alejandro-castro.netlify.app/",
+      "summary": "Estudiante de Ingeniería en Sistemas con 2+ años de experiencia en front-end (React, Next.js), optimización de rendimiento y diseño responsivo (Tailwind CSS). Colaboración en proyectos back-end (Python con Flask, Node.js con Nest.js, Prisma). Habilidad para adaptarme rápidamente a otros lenguajes de programación o frameworks. Amante de la programación y la tecnología.",
+      "location": {
+        "address": "Me encuentro en",
+        "postalCode": "",
+        "city": "Caracas",
+        "countryCode": "Ven",
+        "region": "Venezuela"
+      },
+      "profiles": [
+      
+        {
+          "network": "LinkedIn",
+          "username": "racdeveloper",
+          "url": "https://linkedin.com/in/r-acdev"
+        },
+
+        {
+          "network": "GitHub",
+          "username": "racdeveloper",
+          "url": "https://github.com/r-alejandro-castro"
+        },
+
+        {
+          "network": "GitLab",
+          "username": "racdeveloper",
+          "url": "https://gitlab.com/r-acdev"
+        }
+    ]
+    },
+    "work": [
+      {
+        "name": "Starty",
+        "position": "Desarrollador Front-end y Back-end",
+        "skills": [
+          "Next.js",
+          "Python",
+          "IA",
+          "Remote"
+        ],
+        "url": "",
+        "startDate": "2024-04-01",
+        "endDate": "2025-03-01",
+        "description": "Implementé un servicio de IA con Flask y desarrollé el front-end con Next.js, creando una solución completa.",
+        "summary": [
+          "Desarrollo de la interfaz de usuario con Next.js, utilizando JavaScript (ES6+) y TypeScript para la lógica, HTML5 y CSS3 para la estructura base, y Tailwind CSS para la creación rápida de estilos utilitarios y un diseño responsivo.",
+          "Adaptación y transformación de un script de Python existente para la integración de un modelo de inteligencia artificial en un servicio API RESTful con Flask, permitiendo la interacción a través de peticiones POST."
+        ],
+        "highlights": [
+          ""
+        ]},
+      {
+      "name": "Fundación Instituto de Ingeniería",
+      "position": "Desarrollador Front-end",
+      "skills": [
+        "Next.js",
+        "Nest.js",
+        "Figma"
+      ],
+      "url": "https://www.fii.gob.ve/",
+      "startDate": "2022-10-01",
+      "endDate": "2024-03-01",
+      "description": "Mis inicios se centraron en el desarrollo web con React.js, la implementación de APIs y una colaboración en back-end.",
+      "summary": [
+        "Desarrollo de componentes web reutilizables y optimizados con Next.js, enfocándome en la creación de interfaces de usuario dinámicas y eficientes",
+        "Creación de prototipos y diseño de interfaces de usuario en Figma, trabajando en la experiencia de usuario y la consistencia visual.",
+        "Diseño y estilado de la interfaz de usuario utilizando Tailwind CSS para la implementación rápida de estilos y la creación de layouts responsivos.",
+        "Implementación y optimización de peticiones a API REST.",
+        "Optimización y refactorización de código existente.",
+        "Colaboración en proyecto back-end utilizando Nest.js con Prisma, participando en el desarrollo de APIs y la gestión de bases de datos."
+      ],
+      "highlights": [
+        ""
+      ]}
+
+  ],
+    "volunteer": [{
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
+    }],
+    "education": [
+      {
+      "institution": "Universidad Santa Maria",
+      "url": "https://institution.com/",
+      "area": "Ingeniería en sistemas",
+      "studyType": "Bachelor",
+      "startDate": "2023-10-01",
+      "endDate": null,
+      "score": "4.0",
+      "courses": [
+        "DB1101 - Basic SQL"
+      ]}
+    ],
+
+    "awards": [{
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }],
+    "certificates": [{
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }],
+    "publications": [{
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }],
+
+    "skills": [
+      {
+      "name": "Experto",
+      "level": "Experto",
+      "keywords": [
+        "HTML5",
+        "CSS3",
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "Tailwind CSS",
+        "React.js",
+        "Next.js",
+        "Figma",
+        "Docker",
+        "Ingles B1"
+      ]
+    },
+    {
+      "name": "Intermedio",
+      "level": "Intermedio",
+      "keywords": [
+        "Python",
+        "Redux",
+        "Sass (SCSS)",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "Basico",
+      "level": "Basico",
+      "keywords": [
+        "Nest.js",
+        "Node.js"
+      ]
+    }
+  ],
+
+    "languages": [{
+      "language": "English",
+      "fluency": "Native speaker"
+    }],
+    "interests": [{
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }],
+    "references": [{
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }],
+    "projects": [
+      {
+        "name": "Tic tac toe",
+        "github": "https://github.com/r-alejandro-castro/tic-tac-toe",
+
+        "isActive": true, 
+        "up": "Al poner arriba false, cambia al logo de git hub",
+
+
+        "startDate": "2024-02-10",
+        "endDate": "2021-13-10",
+        "description": "Implementación de juego de tres en raya con historial de jugadas y lógica de ganador.",
+        "highlights": [
+          "React.js"
+        ],
+        "url": "https://rac-tic-tac-toe.netlify.app/"
+      },
+      {
+        "name": "X Card",
+        "github": "https://github.com/r-alejandro-castro/x-card",
+
+        "isActive": true, 
+
+        "startDate": "2024-17-10",
+        "endDate": "2021-23-10",
+        "description": "Página web interactiva en React con funcionalidad de seguimiento de usuarios, basada en componentes reutilizables.",
+        "highlights": [
+          "React.js"
+        ],
+        "url": "https://rac-tic-tac-toe.netlify.app/"
+      },
+      {
+        "name": "Proyectos en JavaScript",
+        "github": "https://github.com/r-alejandro-castro/web-apps-js-and-ts",
+
+        "isActive": false, 
+
+        "startDate": "2024-17-10",
+        "endDate": "2021-23-10",
+        "description": "Colección de mini componentes JavaScript (navbar, contador, etc.) en GitHub, enfocados en funcionalidades individuales.",
+        "highlights": [
+          "JavaScript"
+        ],
+        "url": "https://github.com/r-alejandro-castro/web-apps-js-and-ts"
+      }
+    ]
+  }

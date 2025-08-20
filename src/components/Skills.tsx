@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Skills() {
+const Skills = () => {
   return (
     <div>
       
@@ -9,3 +9,4 @@ function Skills() {
 }
 
 export default Skills
+

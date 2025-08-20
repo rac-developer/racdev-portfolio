@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Time() {
+const Time = () => {
   return (
     <div>
       
@@ -9,3 +9,4 @@ function Time() {
 }
 
 export default Time
+
