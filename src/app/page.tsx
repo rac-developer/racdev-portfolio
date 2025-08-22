@@ -11,7 +11,7 @@ import SocialMedia from "@/components/SocialMedia";
 
 export default function Home() {
   return (
-    <main className="h-screen p-4 xl:p-12">
+    <main className="p-4 xl:p-12">
       
       <div className="grid grid-cols-1 gap-4 xl:grid-cols-4 xl:grid-rows-8 h-full">
 

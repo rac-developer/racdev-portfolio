@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../ui/globals.css";
 
-const primeryFont = Inter({
+const primaryFont = Inter({
   variable: "--font-inter-sans",
   subsets: ["latin"],
 });
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${primeryFont.variable} antialiased`}
+        className={`${primaryFont.variable} antialiased`}
       >
         {children}
       </body>

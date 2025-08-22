@@ -4,10 +4,7 @@ interface Work {
   name: string,
   startDate: string | number,
   endDate: string | number | null,
-  position: string,
-  summary: string | string[],
-  skills: string | string[],
-  description: string
+  position: string
 }
 
 import React from 'react'
@@ -24,7 +21,7 @@ const Experience = () => {
 
           return (
             <li key={name + years + idx}>
-              <article className="text-black">
+              <article className="text-white">
                 <h3>{name}</h3>
                 <h4>{position}</h4>
                 <time>{years}</time>
