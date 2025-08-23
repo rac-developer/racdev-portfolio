@@ -5,10 +5,8 @@ const About = () => {
 
   return (
     <div className="h-full flex flex-col">
-      <h1 className="font-bold text-4xl">Sobre mi</h1>
-      <div className="flex-1 flex flex-col justify-end">
-        <p className="font-light">{summary}</p>
-      </div>
+      <h1 className="title mb-4">Sobre mi</h1>
+      <p className="font-light">{summary}</p>
     </div>
   )
 }

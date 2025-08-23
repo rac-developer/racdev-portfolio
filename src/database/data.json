@@ -129,39 +129,10 @@
 
     "skills": [
       {
-      "name": "Experto",
-      "level": "Experto",
-      "keywords": [
-        "HTML5",
-        "CSS3",
-        "JavaScript (ES6+)",
-        "TypeScript",
-        "Tailwind CSS",
-        "React.js",
-        "Next.js",
-        "Figma",
-        "Docker",
-        "Ingles B1"
-      ]
-    },
-    {
-      "name": "Intermedio",
-      "level": "Intermedio",
-      "keywords": [
-        "Python",
-        "Redux",
-        "Sass (SCSS)",
-        "PostgreSQL"
-      ]
-    },
-    {
-      "name": "Basico",
-      "level": "Basico",
-      "keywords": [
-        "Nest.js",
-        "Node.js"
-      ]
-    }
+      "id":"1",
+      "keyword": "JavaScript",
+      "image": "/skills/javascript.svg"
+      }
   ],
 
     "languages": [{
@@ -183,46 +154,42 @@
       {
         "name": "Tic tac toe",
         "github": "https://github.com/r-alejandro-castro/tic-tac-toe",
-
         "isActive": true, 
         "up": "Al poner arriba false, cambia al logo de git hub",
-
-
         "startDate": "2024-02-10",
         "endDate": "2021-13-10",
         "description": "Implementación de juego de tres en raya con historial de jugadas y lógica de ganador.",
         "highlights": [
           "React.js"
         ],
-        "url": "https://rac-tic-tac-toe.netlify.app/"
+        "url": "https://rac-tic-tac-toe.netlify.app/",
+        "image": "/projects/tic-tac-toe.png"
       },
       {
         "name": "X Card",
         "github": "https://github.com/r-alejandro-castro/x-card",
-
-        "isActive": true, 
-
+        "isActive": false, 
         "startDate": "2024-17-10",
         "endDate": "2021-23-10",
         "description": "Página web interactiva en React con funcionalidad de seguimiento de usuarios, basada en componentes reutilizables.",
         "highlights": [
           "React.js"
         ],
-        "url": "https://rac-tic-tac-toe.netlify.app/"
+        "url": "https://rac-tic-tac-toe.netlify.app/",
+        "image": "/projects/tic-tac-toe.png"
       },
       {
         "name": "Proyectos en JavaScript",
         "github": "https://github.com/r-alejandro-castro/web-apps-js-and-ts",
-
         "isActive": false, 
-
         "startDate": "2024-17-10",
         "endDate": "2021-23-10",
         "description": "Colección de mini componentes JavaScript (navbar, contador, etc.) en GitHub, enfocados en funcionalidades individuales.",
         "highlights": [
           "JavaScript"
         ],
-        "url": "https://github.com/r-alejandro-castro/web-apps-js-and-ts"
+        "url": "https://github.com/r-alejandro-castro/web-apps-js-and-ts",
+        "image": "/projects/tic-tac-toe.png"
       }
     ]
   }
