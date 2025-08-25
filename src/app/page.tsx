@@ -51,7 +51,7 @@ export default function Home() {
           <Youtube />
         </div>
         
-        <div className="card-style xl:row-span-2 xl:col-start-4 xl:row-start-7 relative">
+        <div className="!bg-transparent border-1 border-transparent rounded-xl xl:row-span-2 xl:col-start-4 xl:row-start-7 relative">
           <SocialMedia />
         </div>
         
