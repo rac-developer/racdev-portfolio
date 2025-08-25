@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter  } from "next/font/google";
 import "../ui/globals.css";
 
-const primaryFont = Inter({
+const primaryFont = Inter ({
   variable: "--font-inter-sans",
-  subsets: ["latin"],
+  subsets: ["latin"]
 });
 
 export const metadata: Metadata = {

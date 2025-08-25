@@ -8,7 +8,7 @@ const Proyects = () => {
 
   return (
     <section>
-      <h2 className="title text-center mb-2">Proyectos</h2>
+      <h2 className="title text-center mb-1">Proyectos</h2>
       <div className="relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {displayedProjects.map((project) => (
@@ -73,9 +73,9 @@ const Proyects = () => {
       <div className="text-center mt-4">
         <Link
           href="/projects"
-          className="inline-block text-blue-600 dark:text-blue-400 font-medium transition-all duration-300 ease-in-out hover:text-blue-800 dark:hover:text-blue-300 hover:-translate-y-px hover:scale-105"
+          className="inline-block text-secundary/90 font-medium transition-all duration-300 ease-in-out hover:text-secundary/100 hover:-translate-y-px hover:scale-102"
         >
-          Ver más proyectos
+          Ver más
         </Link>
       </div>
     </section>

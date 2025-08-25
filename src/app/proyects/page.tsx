@@ -10,7 +10,6 @@ import {
   Code2
 } from 'lucide-react';
 
-// Datos de ejemplo con tu estructura
 const projectsData = {
   "projects": [
     {
