@@ -73,10 +73,6 @@ const Proyects = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Título */}
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">
-          Mis Proyectos
-        </h1>
 
         {/* Grid de proyectos */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

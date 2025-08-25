@@ -12,7 +12,7 @@ import React from 'react'
 const Experience = () => {
   return (
     <div className="relative">
-      <h1 className="title mb-4">Experencia</h1>
+      <h1 className="title mb-2">Experencia</h1>
       <ul className="space-y-4">
         {work.map(({name, startDate, endDate, position}: Work, idx) => {
           const startYear = new Date(startDate).getFullYear()

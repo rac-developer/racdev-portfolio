@@ -8,7 +8,7 @@ const Proyects = () => {
 
   return (
     <section>
-      <h2 className="title text-center mb-4">Proyectos</h2>
+      <h2 className="title text-center mb-2">Proyectos</h2>
       <div className="relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {displayedProjects.map((project) => (
