@@ -1,16 +1,17 @@
 import Image from "next/image";
 import { projects } from "@/database/data.json";
 import { ExternalLink, Code2 } from "lucide-react";
-import Link from "next/link";
+import SeeMore from "./ui/SeeMore";
+
 
 const Proyects = () => {
   const displayedProjects = projects.slice(0, 2);
 
   return (
-    <section>
+    <section className="relative overflow-hidden justify-center items-center">
       <h2 className="title text-center mb-1">Proyectos</h2>
-      <div className="relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="relative w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
           {displayedProjects.map((project) => (
             <div key={project.name} className="group relative">
               {project.isActive && project.url && project.image && !project.url.includes("github.com") ? (
@@ -67,16 +68,11 @@ const Proyects = () => {
             </div>
           ))}
         </div>
-        <div className="absolute -bottom-4 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </div>
 
       <div className="text-center mt-4">
-        <Link
-          href="/projects"
-          className="inline-block text-secundary/90 font-medium transition-all duration-300 ease-in-out hover:text-secundary/100 hover:-translate-y-px hover:scale-102"
-        >
-          Ver más
-        </Link>
+        <SeeMore link='/projects' />
       </div>
     </section>
   );

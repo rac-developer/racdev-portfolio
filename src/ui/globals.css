@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* resets útiles */
+* { box-sizing: border-box; }
+html, body, #__next { height: 100%; }
+
 :root {
   --background: #001418;
   --foreground: #171717;
@@ -28,11 +32,15 @@
 }
 
 body {
+  margin: 0; /* <- quita el espacio por defecto del navegador */
   background: var(--background);
   font-family: var(--font-sans), sans-serif;
   font-weight: 300;
   color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 
 .background-style {
   background-color: transparent !important;
@@ -42,6 +50,11 @@ body {
 .card-style {
   border-radius: 0.75rem; 
   padding: 1rem;
+  box-sizing: border-box;
+}
+
+.card-style > *:first-child {
+  margin-top: 0;
 }
 
 .card-photo {
@@ -62,3 +75,17 @@ body {
     animation: infinite-scroll 60s linear infinite;
   }
 }
+
+.flex-responsive-center {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+@media (min-width: 1280px) {
+  .flex-responsive-center {
+    align-items: flex-start;
+  }
+}
+
