@@ -5,7 +5,7 @@ function Photo() {
   return (
     <div className="relative xl:w-full xl:h-full  rounded-xl overflow-hidden ">
       <Image
-        src='/me2.png'
+        src='/me.png'
         width={500}
         height={500}
         alt="Rodolfo Alejandro C"
