@@ -9,6 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@heroui/button": "^2.2.24",
+    "@heroui/link": "^2.2.21",
+    "@heroui/navbar": "^2.2.22",
     "lucide-react": "^0.541.0",
     "next": "15.5.0",
     "react": "19.1.0",
