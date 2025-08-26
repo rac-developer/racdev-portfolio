@@ -6,7 +6,6 @@ import {
 } from 'react-icons/si';
 import { IoLogoJavascript } from "react-icons/io";
 
-
 const size: number = 50;
 
 const technologies = [
@@ -32,7 +31,7 @@ const technologies = [
 
 const Skills = () => {
   return (
-    <div className="h-full flex flex-col justify-center items-center">
+    <div className="h-full flex flex-col justify-center items-center p-6">
       <div
         className="w-full inline-flex flex-nowrap overflow-hidden 
                    [mask-image:_linear-gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]"

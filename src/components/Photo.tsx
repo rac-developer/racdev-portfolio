@@ -3,9 +3,9 @@ import React from 'react'
 
 function Photo() {
   return (
-    <div className="relative w-full h-full rounded-xl overflow-hidden ">
+    <div className="relative xl:w-full xl:h-full  rounded-xl overflow-hidden ">
       <Image
-        src='/me.png'
+        src='/me2.png'
         width={500}
         height={500}
         alt="Rodolfo Alejandro C"

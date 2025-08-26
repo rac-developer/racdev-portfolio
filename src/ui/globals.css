@@ -75,17 +75,39 @@ body {
     animation: infinite-scroll 60s linear infinite;
   }
 }
-
+/* 
 .flex-responsive-center {
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: flex-start; 
 }
 
 @media (min-width: 1280px) {
   .flex-responsive-center {
     align-items: flex-start;
   }
-}
+} */
 
+  /* .card-style {
+    @apply rounded-xl p-4; 
+    width: 60dvh; 
+  }
+
+  
+  @screen xl {
+    .card-style {
+      width: auto;
+    }
+  }
+
+  .card-photo {
+    @apply rounded-xl;
+    width: dvh; 
+  }
+
+  @screen xl {
+    .card-photo {
+      width: auto;
+    }
+  } */

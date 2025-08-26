@@ -11,7 +11,7 @@ const Proyects = () => {
     <section className="relative overflow-hidden justify-center items-center">
       <h2 className="title text-center mb-1">Proyectos</h2>
       <div className="relative w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
           {displayedProjects.map((project) => (
             <div key={project.name} className="group relative">
               {project.isActive && project.url && project.image && !project.url.includes("github.com") ? (

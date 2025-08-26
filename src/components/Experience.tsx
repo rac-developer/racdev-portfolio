@@ -14,8 +14,8 @@ import React from 'react'
 const Experience = () => {
   return (
     <div className="relative">
-      <section className="flex-responsive-center">
-        <h1 className="title mb-1 text-">Experencia</h1>
+      <section className="flex-responsive-center flex-1 overflow-hidden relative">
+        <h1 className="title mb-1">Experencia</h1>
         <ul className="space-y-4">
           {work.slice(0, 2).map(({ name, startDate, endDate, position, skills }: Work, idx) => {
 
@@ -24,7 +24,7 @@ const Experience = () => {
             const years = `${startYear} - ${endYear}`
 
             return (
-              <li key={name + years + idx}>
+              <li key={idx}>
                 <article>
                   <h3 className="text-lg font-medium capitalize tracking-tight">{name}</h3>
                   <h4 className="text-gray-400 capitalize">{position}</h4>
@@ -41,7 +41,10 @@ const Experience = () => {
             )
           })}
         </ul>
+
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-30 bg-gradient-to-t from-background/80 to-transparent"/>
       </section>
+
       <SeeMore link='/experience'/>
     </div>
   )
