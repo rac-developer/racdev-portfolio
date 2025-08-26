@@ -172,6 +172,19 @@
         "image": "/projects/tic-tac-toe.png"
       },
       {
+        "name": "Disney Plus Front",
+        "github": "https://github.com/r-alejandro-castro/x-card",
+        "isActive": true, 
+        "startDate": "2024-17-10",
+        "endDate": "2021-23-10",
+        "description": "Página web interactiva en React con funcionalidad de seguimiento de usuarios, basada en componentes reutilizables.",
+        "highlights": [
+          "React.js"
+        ],
+        "url": "https://rac-tic-tac-toe.netlify.app/",
+        "image": "/projects/disney.png"
+      },
+      {
         "name": "X Card",
         "github": "https://github.com/r-alejandro-castro/x-card",
         "isActive": false, 
