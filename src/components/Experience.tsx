@@ -13,7 +13,7 @@ import React from 'react'
 
 const Experience = () => {
   return (
-    <div className="relative">
+    <div className="flex flex-col h-full relative">
       <section className="flex-responsive-center flex-1 overflow-hidden relative">
         <h1 className="title mb-1">Experencia</h1>
         <ul className="space-y-4">
@@ -44,8 +44,9 @@ const Experience = () => {
 
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-30 bg-gradient-to-t from-background/80 to-transparent"/>
       </section>
-
-      <SeeMore link='/experience'/>
+      <div className="relative z-10 mt-auto pt-4 bg-background/80 backdrop-blur-sm">
+        <SeeMore link='/experience'/>
+      </div>
     </div>
   )
 }

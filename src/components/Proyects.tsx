@@ -8,7 +8,7 @@ const Proyects = () => {
   const displayedProjects = projects.slice(0, 2);
 
   return (
-    <section className="relative overflow-hidden justify-center items-center">
+    <section className="relative overflow-hidden justify-center items-center flex flex-col h-full ">
       <h2 className="title text-center mb-1">Proyectos</h2>
       <div className="relative w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
@@ -71,7 +71,7 @@ const Proyects = () => {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
       </div>
 
-      <div className="text-center mt-4">
+      <div className="relative z-10 mt-auto pt-4 bg-background/80 backdrop-blur-sm">
         <SeeMore link='/projects' />
       </div>
     </section>

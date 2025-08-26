@@ -12,7 +12,8 @@ import SocialMedia from "@/components/SocialMedia";
 
 export default function Home() {
   return (
-    <main className="px-4 xl:px-12 py-8">
+    <main className="px-4 xl:px-8 py-8 w-full max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-none mx-auto">
+
       {/* Grid principal */}
       <div className="grid grid-cols-1 gap-4 min-h-0 overflow-y-auto xl:grid-cols-4 xl:auto-rows-[minmax(130px,auto)] xl:h-auto xl:overflow-visible">
         
