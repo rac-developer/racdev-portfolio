@@ -50,7 +50,7 @@ const Proyects = () => {
                   className="group block relative rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300"
                   aria-label={`Ver código del proyecto ${project.name} en GitHub`}
                 >
-                  <div className="relative aspect-video flex items-center justify-center bg-gray-200 dark:bg-gray-800">
+                  <div className="relative aspect-video flex items-center justify-center bg-gray-200">
                     <Code2 className="w-12 h-12 text-gray-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
                     <div className="absolute bottom-4 left-4 text-white">

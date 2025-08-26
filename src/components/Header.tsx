@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/navbar";
-// import { Link } from "@heroui/link";
-// import { Button } from "@heroui/button";
-// import Image from "next/image";
+import { Button } from "@heroui/button";
+import { Link } from "@heroui/link";
 import Logotipo from "@/components/Logotipo";
 
 export const Header = () => {
@@ -31,7 +30,9 @@ export const Header = () => {
       }`}
     >
       <NavbarBrand className="pl-6">
-        <Logotipo className="transition-all duration-300 text-secundary" width={160} />
+        <Button as={Link} color="primary" href="/" variant="flat">
+            <Logotipo className="transition-all duration-300 text-secundary" width={160} />
+          </Button>
       </NavbarBrand>
       <NavbarContent justify="end">
         <NavbarItem className="pr-6">

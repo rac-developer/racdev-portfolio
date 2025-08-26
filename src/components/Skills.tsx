@@ -38,14 +38,14 @@ const Skills = () => {
       >
         <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 animate-infinite-scroll">
           {technologies.map((tech, index) => (
-            <li key={`tech-${index}`} className="flex flex-col items-center text-center text-gray-500 dark:text-gray-400 hover:text-secundary transition-colors">
+            <li key={`tech-${index}`} className="flex flex-col items-center text-center text-gray-500 hover:text-secundary transition-colors">
               {tech.icon}
             </li>
           ))}
         </ul>
         <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 animate-infinite-scroll" aria-hidden="true">
           {technologies.map((tech, index) => (
-            <li key={`tech-dup-${index}`} className="flex flex-col items-center text-center text-gray-500 dark:text-gray-400 hover:text-secundary transition-colors">
+            <li key={`tech-dup-${index}`} className="flex flex-col items-center text-center text-gray-500 hover:text-secundary transition-colors">
               {tech.icon}
             </li>
           ))}

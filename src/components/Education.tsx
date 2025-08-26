@@ -5,26 +5,25 @@ import SeeMore from './ui/SeeMore'
 const Education = () => {
   return (
     <div className='flex flex-col h-full relative'>
-      <section className="flex-responsive-center flex-1 overflow-hidden relative">
+      <section className="flex-responsive-center flex-1 overflow-hidden relative px-4">
         <h2 className="title mb-1">Educación</h2>
-        <ul className="space-y-4">
+        <ol className="relative border-s border-gray-200 dark:border-gray-700">
           {data.education.slice(0, 3).map(({ institution, area, startDate, endDate }, idx) => {
 
             const startYear = new Date(startDate).getFullYear()
-            const endYear = endDate ? new Date(endDate).getFullYear() : "Actualmente"
+            const endYear = endDate ? new Date(endDate).getFullYear() : "Cursando"
             const years = `${startYear} - ${endYear}`
 
             return (
-              <li key={idx}>
-                <article>
-                  <h3 className="text-lg font-medium capitalize tracking-tight">{institution}</h3>
-                  <h4 className="text-gray-400 capitalize">{area}</h4>
-                  <time className="text-md text-gray-500">{years}</time>
-                </article>
+              <li key={idx} className="mb-10 ms-4 last:mb-0">
+                <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700" />
+                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{years}</time>
+                <h3 className="text-lg font-semibold text-foreground">{institution}</h3>
+                <h4 className="text-base font-normal text-gray-500 dark:text-gray-400">{area}</h4>
               </li>
             )
           })}
-        </ul>
+        </ol>
         
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-30 bg-gradient-to-t from-background/80 to-transparent"/>
       </section>

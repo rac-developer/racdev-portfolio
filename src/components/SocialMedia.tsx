@@ -4,7 +4,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import data from '@/database/data.json'
 
 const SocialMedia = () => {
-  const colorText = 'text-gray-500 dark:text-gray-400 hover:text-secundary transition-colors'
+  const colorText = 'text-gray-500 hover:text-secundary transition-colors'
 
   const iconMap: { [key: string]: React.ElementType } = {
     'X': FaXTwitter,
