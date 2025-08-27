@@ -24,12 +24,12 @@ html, body, #__next { height: 100%; }
   --color-secundary-bg: var(--secundary-other);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #001418;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   margin: 0; /* <- quita el espacio por defecto del navegador */
