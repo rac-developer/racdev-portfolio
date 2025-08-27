@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter  } from "next/font/google";
 import "../ui/globals.css";
 import { Header } from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const primaryFont = Inter ({
   variable: "--font-inter-sans",
@@ -19,14 +20,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${primaryFont.variable} min-h-svh overflow-x-hidden`}
-      >
-      <div className="sticky top-0 z-50 py-4 -mx-4 xl:-mx-8 px-4 xl:px-8 mb-4">
-        <Header/>
-      </div>
-        {children}
+    <html lang="es">
+      <body className={`${primaryFont.variable} min-h-svh overflow-x-hidden flex flex-col`}>
+        
+        <div className="sticky top-0 z-50 py-4 px-4 xl:px-8 mb-4 bg-background">
+          <Header />
+        </div>
+
+        <div className="flex flex-col flex-grow w-full max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-none mx-auto px-6 sm:px-10 xl:px-10">
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </div>
+
       </body>
     </html>
   );
