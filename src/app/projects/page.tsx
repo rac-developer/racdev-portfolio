@@ -8,6 +8,7 @@ import {
   Code2
 } from 'lucide-react';
 import { projects } from "@/database/data.json";
+import SkillBadge from "@/components/ui/SkillBadge";
 
 function Page() {
   const [loadingStates, setLoadingStates] = useState<{[key: string]: boolean}>({});
@@ -21,21 +22,19 @@ function Page() {
   const handleIframeLoad = (name: string) => setLoadingStates(prev => ({ ...prev, [name]: false }));
 
   return (
-    <div className="min-h-screen py-12 px-4">
-      <h1 className="mb-8 text-5xl font-bold tracking-tight text-primary text-center">Proyectos</h1>
-      
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <h1 className="title-subpage text-primary text-center">Proyectos</h1>
       <div className="max-w-6xl mx-auto">
-        {/* Grid de proyectos */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div
               key={project.name}
               className="background-style rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"
             >
-              {/* Header con nombre y estado */}
-              <div className="p-6 border-b border-gray-100">
+
+              <div className="p-6">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-semibold text-foreground">
+                  <h3 className="text-2xl font-semibold text-foreground">
                     {project.name}
                   </h3>
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -49,7 +48,6 @@ function Page() {
 
               </div>
 
-              {/* Contenedor de la preview - solo si está activo y tiene URL */}
               {project.isActive && project.url && !project.url.includes('github.com') ? (
                 <div className="relative h-64 bg-gray-100">
                   {/* Estado de carga */}
@@ -84,7 +82,7 @@ function Page() {
                     <iframe
                       src={project.url}
                       title={`Vista previa de ${project.name}`}
-                      className={`w-full h-full border-0 transition-opacity duration-300 ${
+                      className={`w-full h-full border-0 transition-opacity duration-300 scrollbar-hide scroll-smooth ${
                         loadingStates[project.name] !== false ? 'opacity-0' : 'opacity-100'
                       }`}
                       onLoad={() => handleIframeLoad(project.name)}
@@ -95,7 +93,6 @@ function Page() {
                   )}
                 </div>
               ) : (
-                // Si está inactivo o es un repositorio de GitHub, mostrar placeholder
                 <div className="h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                   <div className="text-center p-6">
                     <Code2 className="w-12 h-12 text-gray-400 mx-auto mb-4" />
@@ -115,30 +112,20 @@ function Page() {
                 </div>
               )}
 
-              {/* Información del proyecto */}
               <div className="p-6 flex flex-col flex-grow">
-                {/* Descripción */}
-                <p className="text-gray-200 text-sm mb-4 leading-relaxed">
+                <p className="text-gray-200 text-md mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
-                {/* Contenedor para alinear tecnologías y botones al fondo */}
                 <div className="mt-auto pt-4">
-                  {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.highlights.map((tech) => (
-                      <span
-                        key={tech}
-                        className="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-medium "
-                      >
-                        {tech}
-                      </span>
+                    {project.skills.map((skill, skillIdx) => (
+                      <SkillBadge key={skillIdx} skill={skill} color="primary"/>
                     ))}
                   </div>
 
                   {/* Botones de acción */}
                   <div className="flex gap-3">
-                    {/* Botón GitHub */}
                     <a
                       href={project.github}
                       target="_blank"
@@ -149,13 +136,12 @@ function Page() {
                       Código
                     </a>
 
-                    {/* Botón Ver Proyecto - solo si está activo y no es GitHub */}
                     {project.isActive && project.url && !project.url.includes('github.com') && (
                       <a
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors flex-1 justify-center text-sm"
+                        className="flex items-center gap-2 btn-primary px-4 py-2 rounded-lg transition-colors flex-1 justify-center text-sm font-medium"
                       >
                         <ExternalLink className="w-4 h-4" />
                         Ver Live

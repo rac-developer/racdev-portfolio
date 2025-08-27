@@ -158,57 +158,104 @@
     }],
     "projects": [
       {
-        "name": "Tic tac toe",
-        "github": "https://github.com/r-alejandro-castro/tic-tac-toe",
+        "name": "Disney Plus Front",
+        "github": "https://github.com/r-acdev/react-js/tree/main/projects/07-disney-clone",
         "isActive": true, 
         "up": "Al poner arriba false, cambia al logo de git hub",
-        "startDate": "2024-02-10",
+        "startDate": "2024-02-10", 
         "endDate": "2021-13-10",
-        "description": "Implementación de juego de tres en raya con historial de jugadas y lógica de ganador.",
-        "highlights": [
-          "React.js"
+        "description": "Frontend de Disney Plus desarrollado con React, TypeScript y Tailwind CSS.",
+        "skills": [
+          "React.js",
+          "TypeScript",
+          "Tailwind CSS"
         ],
-        "url": "https://rac-tic-tac-toe.netlify.app/",
-        "image": "/projects/tic-tac-toe.png"
-      },
-      {
-        "name": "Disney Plus Front",
-        "github": "https://github.com/r-alejandro-castro/x-card",
-        "isActive": true, 
-        "startDate": "2024-17-10",
-        "endDate": "2021-23-10",
-        "description": "Página web interactiva en React con funcionalidad de seguimiento de usuarios, basada en componentes reutilizables.",
-        "highlights": [
-          "React.js"
-        ],
-        "url": "https://rac-tic-tac-toe.netlify.app/",
+        "url": "https://disney-front-react.vercel.app/",
         "image": "/projects/disney.png"
       },
       {
-        "name": "X Card",
-        "github": "https://github.com/r-alejandro-castro/x-card",
-        "isActive": false, 
+        "name": "Tic tac toe",
+        "github": "https://github.com/r-acdev/react-js/tree/main/projects/01-tic-tac-toe",
+        "isActive": true,
         "startDate": "2024-17-10",
         "endDate": "2021-23-10",
-        "description": "Página web interactiva en React con funcionalidad de seguimiento de usuarios, basada en componentes reutilizables.",
-        "highlights": [
+        "description": "Implementación de juego de tres en raya con historial de jugadas y lógica de ganador.",
+        "skills": [
           "React.js"
         ],
         "url": "https://rac-tic-tac-toe.netlify.app/",
         "image": "/projects/tic-tac-toe.png"
       },
       {
-        "name": "Proyectos en JavaScript",
-        "github": "https://github.com/r-alejandro-castro/web-apps-js-and-ts",
-        "isActive": false, 
+        "name": "X Card",
+        "github": "https://github.com/r-acdev/react-js/tree/main/projects/02-x-card",
+        "isActive": true,
         "startDate": "2024-17-10",
         "endDate": "2021-23-10",
-        "description": "Colección de mini componentes JavaScript (navbar, contador, etc.) en GitHub, enfocados en funcionalidades individuales.",
-        "highlights": [
-          "JavaScript"
+        "description": "Página web interactiva en React con funcionalidad de seguimiento de usuarios, basada en componentes reutilizables.",
+        "skills": [
+          "React.js"
         ],
-        "url": "https://github.com/r-alejandro-castro/web-apps-js-and-ts",
-        "image": "/projects/tic-tac-toe.png"
+        "url": "https://rca-x-card.netlify.app/",
+        "image": "/projects/x.png"
+      },
+      {
+        "name": "Proyectos en Next.js",
+        "github": "https://github.com/r-acdev/next-js",
+        "isActive": false,
+        "startDate": "2024-17-10",
+        "endDate": "2021-23-10",
+        "description": "Colección de proyectos y componentes desarrollados con Next.js, TypeScript, Tailwind CSS, entre otras tecnologías.",
+        "skills": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS"
+        ],
+        "url": "https://github.com/r-acdev/next-js",
+        "image": "/projects/"
+      },
+      {
+        "name": "Proyectos en React.js",
+        "github": "https://github.com/r-acdev/react-js",
+        "isActive": false,
+        "startDate": "2024-17-10",
+        "endDate": "2021-23-10",
+        "description": "Colección de proyectos y componentes en React.js, enfocados en funcionalidades individuales.",
+        "skills": [
+          "JavaScript",
+          "TypeScript",
+          "Tailwind CSS",
+          "Redux"
+        ],
+        "url": "https://github.com/r-acdev/react-js",
+        "image": "/projects/"
+      },
+      {
+        "name": "Proyectos en Nest.js",
+        "github": "https://github.com/r-acdev/nest-js",
+        "isActive": false,
+        "startDate": "2024-17-10",
+        "endDate": "2021-23-10",
+        "description": "Colección de proyectos backend desarrollados con Nest.js, entre otras tecnologías.",
+        "skills": [
+          "Nest.js",
+          "Prisma"
+        ],
+        "url": "https://github.com/r-acdev/nest-js",
+        "image": "/projects/"
+      },
+      {
+        "name": "Proyectos en Python",
+        "github": "https://github.com/r-acdev/python",
+        "isActive": false,
+        "startDate": "2024-17-10",
+        "endDate": "2021-23-10",
+        "description": "Colección de proyectos y scripts desarrollados en Python.",
+        "skills": [
+          "Python"
+        ],
+        "url": "https://github.com/r-acdev/python",
+        "image": "/projects/"
       }
     ]
   }

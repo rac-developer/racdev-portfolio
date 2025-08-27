@@ -29,7 +29,7 @@ const Projects = () => {
 
   return (
     <section className="relative overflow-hidden justify-center items-center flex flex-col h-full ">
-      <h2 className="title text-center mb-2">Proyectos</h2>
+      <h2 className="title text-center">Proyectos</h2>
       <div className="relative w-full px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
@@ -52,7 +52,7 @@ const Projects = () => {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
-                      {/* Título */}
+                      
                       <div className="absolute bottom-4 left-4 text-white">
                         <h3 className="font-semibold text-1xl drop-shadow-md">
                           {project.name}

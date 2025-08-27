@@ -29,8 +29,8 @@ export const Header = () => {
           : "bg-transparent h-20"
       }`}
     >
-      <NavbarBrand className="pl-6">
-        <Button as={Link} color="primary" href="/" variant="flat">
+      <NavbarBrand>
+        <Button as={Link} color="primary" href="/" variant="flat" className="p-0 sm:p-10 xl:p-2 ">
             <Logotipo className="transition-all duration-300 text-secundary" width={160} />
           </Button>
       </NavbarBrand>

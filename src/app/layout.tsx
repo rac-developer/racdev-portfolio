@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={`${primaryFont.variable} min-h-svh overflow-x-hidden`}
       >
-        <div className="sticky top-0 z-50 py-4 -mx-4 xl:-mx-8 px-4 xl:px-8 mb-4">
+      <div className="sticky top-0 z-50 py-4 -mx-4 xl:-mx-8 px-4 xl:px-8 mb-4">
         <Header/>
       </div>
         {children}

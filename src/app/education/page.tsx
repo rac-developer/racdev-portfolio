@@ -11,7 +11,7 @@ export default function page() {
 
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-auto flex-col px-4 py-8">
-      <h1 className="mb-8 text-5xl font-bold tracking-tight text-primary">Educación</h1>
+      <h1 className="title-subpage text-primary">Educación</h1>
       <ol className="relative border-s border-gray-200">
         {education.map(({ institution, area, startDate, endDate }: Education, idx) => {
 

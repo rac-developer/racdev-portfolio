@@ -5,8 +5,8 @@ const About = () => {
 
   return (
     <div className="h-full flex flex-col text-white">
-      <h1 className="title mb-1">Sobre mi</h1>
-      <p className="font-light text-1xl">{summary}</p>
+      <h1 className="title">Sobre mi</h1>
+      <p className="parrafo">{summary}</p>
     </div>
   )
 }

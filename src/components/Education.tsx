@@ -1,14 +1,37 @@
-import React from 'react'
-import data from '@/database/data.json'
+'use client'
+
+import { useState, useEffect } from "react";
+import { education }  from '@/database/data.json'
 import SeeMore from './ui/SeeMore'
 
 const Education = () => {
+
+  const [numToDisplay, setNumToDisplay] = useState(3); // Por defecto muestra 3
+ 
+  useEffect(() => {
+    const handleResize = () => {
+      // Muestra 4 proyectos si la pantalla es menor a 1410px
+      if (window.innerWidth < 1500) {
+        setNumToDisplay(2);
+      } else {
+        // Para anchos de 1500px o más, muestra 2. Puedes ajustar esto.
+        setNumToDisplay(2);
+      }
+    };
+ 
+    handleResize(); // Se ejecuta al montar para el estado inicial
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+ 
+  const displayedEducation = education.slice(0, numToDisplay);
+
   return (
     <div className='flex flex-col h-full relative text-white'>
       <section className="flex-responsive-center flex-1 overflow-hidden relative px-4">
         <h2 className="title mb-1">Educación</h2>
         <ol className="relative border-s border-gray-200">
-          {data.education.slice(0, 3).map(({ institution, area, startDate, endDate }, idx) => {
+          {displayedEducation.map(({ institution, area, startDate, endDate }, idx) => {
 
             const startYear = new Date(startDate).getFullYear()
             const endYear = endDate ? new Date(endDate).getFullYear() : "Cursando"

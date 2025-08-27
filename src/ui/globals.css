@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* resets útiles */
 * { box-sizing: border-box; }
 html, body, #__next { height: 100%; }
 
@@ -13,7 +12,7 @@ html, body, #__next { height: 100%; }
   --secundary-other: #036056;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter-sans);
@@ -22,6 +21,8 @@ html, body, #__next { height: 100%; }
   --color-p-other: var(--primary-other);
   --color-secundary: var(--secundary);
   --color-secundary-bg: var(--secundary-other);
+  --breakpoint-laptop: 1390px;
+  --breakpoint-desktop: 1500px;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -32,38 +33,13 @@ html, body, #__next { height: 100%; }
 } */
 
 body {
-  margin: 0; /* <- quita el espacio por defecto del navegador */
+  margin: 0;
   background: var(--background);
   font-family: var(--font-sans), sans-serif;
   font-weight: 300;
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-
-.background-style {
-  background-color: transparent !important;
-  border: 1px solid var(--secundary-other, #036056);
-}
-
-.card-style {
-  border-radius: 0.75rem; 
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-.card-style > *:first-child {
-  margin-top: 0;
-}
-
-.card-photo {
-  border-radius: 0.75rem;
-}
-
-.title{
-  font-weight: bold;
-  font-size: 2rem;
 }
 
 @layer utilities {
@@ -74,40 +50,36 @@ body {
   .animate-infinite-scroll {
     animation: infinite-scroll 60s linear infinite;
   }
-}
-/* 
-.flex-responsive-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; 
-}
-
-@media (min-width: 1280px) {
-  .flex-responsive-center {
-    align-items: flex-start;
-  }
-} */
-
-  /* .card-style {
-    @apply rounded-xl p-4; 
-    width: 60dvh; 
+  .parrafo {
+    @apply text-lg xl:text-lg/6 font-light;
   }
 
-  
-  @screen xl {
-    .card-style {
-      width: auto;
-    }
+  .title{
+    @apply font-bold text-2xl xl:text-4xl pb-4;
+  }
+
+  .title-subpage {
+    @apply mb-8 text-5xl font-bold tracking-tight;
+  }
+  .btn-primary {
+    @apply bg-primary/90 text-background hover:bg-primary/100;
+  }
+}
+
+@layer components {
+  .background-style {
+    @apply !bg-transparent border border-secundary-bg;
+  }
+
+  .card-style {
+    @apply rounded-lg p-4 box-border;
+  }
+
+  .card-style > *:first-child {
+    @apply mt-0;
   }
 
   .card-photo {
-    @apply rounded-xl;
-    width: dvh; 
+    @apply rounded-lg;
   }
-
-  @screen xl {
-    .card-photo {
-      width: auto;
-    }
-  } */
+}
