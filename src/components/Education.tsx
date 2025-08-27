@@ -4,7 +4,7 @@ import SeeMore from './ui/SeeMore'
 
 const Education = () => {
   return (
-    <div className='flex flex-col h-full relative'>
+    <div className='flex flex-col h-full relative text-white'>
       <section className="flex-responsive-center flex-1 overflow-hidden relative px-4">
         <h2 className="title mb-1">Educación</h2>
         <ol className="relative border-s border-gray-200">
@@ -16,10 +16,10 @@ const Education = () => {
 
             return (
               <li key={idx} className="mb-10 ms-4 last:mb-0">
-                <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200" />
+                <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-gray-200 bg-gray-200" />
                 <time className="mb-1 text-sm font-normal leading-none text-gray-400">{years}</time>
-                <h3 className="text-lg font-semibold text-foreground">{institution}</h3>
-                <h4 className="text-base font-normal text-gray-500">{area}</h4>
+                <h3 className="text-lg font-semibold text-white">{institution}</h3>
+                <h4 className="text-base font-normal text-gray-400">{area}</h4>
               </li>
             )
           })}

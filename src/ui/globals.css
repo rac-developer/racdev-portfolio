@@ -6,7 +6,7 @@ html, body, #__next { height: 100%; }
 
 :root {
   --background: #001418;
-  --foreground: #171717;
+  --foreground: #fff;
   --primary: #FC741E;
   --primary-other: #6d120f;
   --secundary: #33dfff;

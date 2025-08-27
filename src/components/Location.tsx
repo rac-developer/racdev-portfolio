@@ -4,7 +4,7 @@ const Location = () => {
   const { city, countryCode } = basics.location
 
   return (
-    <div className="flex flex-col h-full justify-center text-center">
+    <div className="flex flex-col h-full justify-center text-center text-white">
       <h2 className="text-4xl font-bold">Me encuentro en {city}, {countryCode} </h2>
     </div>
   )

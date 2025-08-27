@@ -4,7 +4,7 @@ const About = () => {
   const {summary} = basics
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col text-white">
       <h1 className="title mb-1">Sobre mi</h1>
       <p className="font-light text-1xl">{summary}</p>
     </div>

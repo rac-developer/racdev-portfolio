@@ -4,7 +4,7 @@ import { ExternalLink, Code2 } from "lucide-react";
 import SeeMore from "./ui/SeeMore";
 
 
-const Proyects = () => {
+const Projects = () => {
   const displayedProjects = projects.slice(0, 2);
 
   return (
@@ -78,4 +78,4 @@ const Proyects = () => {
   );
 }
 
-export default Proyects
+export default Projects

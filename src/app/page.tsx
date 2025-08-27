@@ -2,7 +2,7 @@ import About from "@/components/About";
 import Photo from "@/components/Photo";
 import CV from "@/components/CV";
 import Experience from "@/components/Experience";
-import Proyects from "@/components/Proyects";
+import Projects from "@/components/Projects";
 import Time from "@/components/Time";
 import Location from "@/components/Location";
 import Skills from "@/components/Skills";
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
 
         <div className="card-style background-style xl:col-span-2 xl:row-span-2 xl:row-start-2 relative h-full">
-          <Proyects />
+          <Projects />
         </div>
 
         <div className="card-style background-style xl:row-span-1 xl:col-start-1 xl:row-start-4 relative h-full">

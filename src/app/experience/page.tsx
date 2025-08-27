@@ -24,9 +24,9 @@ export default function page() {
 
             return (
               <li key={idx} className="mb-10 ms-4">
-                <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200" />
+                <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-gray-200 bg-gray-200" />
                 <time className="mb-1 text-sm font-normal leading-none text-gray-400 ">{years}</time>
-                <h3 className="text-2xl font-semibold text-foreground">{name}</h3>
+                <h3 className="text-2xl font-semibold text-white">{name}</h3>
                 <h4 className="mb-2 text-base font-normal text-gray-400 ">{position}</h4>
                 <div className="mb-4 flex flex-wrap gap-2">
                   {skills.map((skill, skillIdx) => (
