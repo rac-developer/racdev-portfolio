@@ -47,7 +47,7 @@ const projectsData = {
 };
 import React from 'react'
 
-const Proyects = () => {
+const page = () => {
   const [loadingStates, setLoadingStates] = useState<{[key: string]: boolean}>({});
   const [errorStates, setErrorStates] = useState<{[key: string]: boolean}>({});
 
@@ -228,4 +228,4 @@ const Proyects = () => {
   );
 }
 
-export default Proyects
+export default page

@@ -1,11 +1,31 @@
+'use client'
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { projects } from "@/database/data.json";
 import { ExternalLink, Code2 } from "lucide-react";
 import SeeMore from "./ui/SeeMore";
 
-
 const Projects = () => {
-  const displayedProjects = projects.slice(0, 2);
+  const [numToDisplay, setNumToDisplay] = useState(4); // Por defecto muestra 4
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Muestra 4 proyectos si la pantalla es menor a 1410px
+      if (window.innerWidth < 1410) {
+        setNumToDisplay(4);
+      } else {
+        // Para anchos de 1410px o más, muestra 2. Puedes ajustar esto.
+        setNumToDisplay(2);
+      }
+    };
+
+    handleResize(); // Se ejecuta al montar para el estado inicial
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const displayedProjects = projects.slice(0, numToDisplay);
 
   return (
     <section className="relative overflow-hidden justify-center items-center flex flex-col h-full ">
