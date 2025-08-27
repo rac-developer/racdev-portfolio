@@ -45,9 +45,8 @@ const projectsData = {
     }
   ]
 };
-import React from 'react'
 
-const page = () => {
+function page() {
   const [loadingStates, setLoadingStates] = useState<{[key: string]: boolean}>({});
   const [errorStates, setErrorStates] = useState<{[key: string]: boolean}>({});
 
@@ -227,5 +226,6 @@ const page = () => {
     </div>
   );
 }
+
 
 export default page
