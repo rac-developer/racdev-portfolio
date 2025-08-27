@@ -46,7 +46,7 @@ const projectsData = {
   ]
 };
 
-function page() {
+function Page() {
   const [loadingStates, setLoadingStates] = useState<{[key: string]: boolean}>({});
   const [errorStates, setErrorStates] = useState<{[key: string]: boolean}>({});
 
@@ -228,4 +228,4 @@ function page() {
 }
 
 
-export default page
+export default Page
