@@ -12,7 +12,7 @@ const Projects = () => {
   useEffect(() => {
     const handleResize = () => {
       // Muestra 4 proyectos si la pantalla es menor a 1410px
-      if (window.innerWidth < 1410) {
+      if (window.innerWidth < 1520) {
         setNumToDisplay(4);
       } else {
         // Para anchos de 1410px o más, muestra 2. Puedes ajustar esto.
