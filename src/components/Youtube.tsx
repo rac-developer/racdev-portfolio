@@ -1,7 +1,8 @@
 import React from 'react'
+import { basics } from "@/database/data.json"
 
 const Youtube = () => {
-  const videoId = 'dQw4w9WgXcQ'; 
+  const videoId = basics.videoYT; 
 
   return (
     <div className="relative w-full overflow-hidden rounded-xl pt-[56.25%] xl:pt-0 xl:h-full">

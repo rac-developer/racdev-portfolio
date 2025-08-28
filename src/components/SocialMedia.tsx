@@ -21,7 +21,7 @@ const SocialMedia = () => {
   })).filter(link => link.icon);
   
   return (
-    <div className="grid h-full w-full grid-cols-2 items-center justify-items-center gap-4">
+    <div className="grid h-full w-full grid-cols-1 items-center justify-items-center gap-4 sm:grid-cols-2">
       {socialLinks.map((link) => {
 
         const Icon = link.icon;
@@ -36,7 +36,7 @@ const SocialMedia = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.name}
-              className={`flex items-center justify-center transition-transform hover:scale-110 ${link.color} !bg-transparent`}
+              className={`flex flex-col items-center justify-center transition-transform hover:scale-110 ${link.color} !bg-transparent`}
             >
               <Icon className="text-5xl" />
             </a>
