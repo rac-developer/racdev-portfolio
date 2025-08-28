@@ -6,7 +6,8 @@
       "image": "",
       "email": "soyracm@gmail.com",
       "phone": "",
-      "url": "https://cv-alejandro-castro.netlify.app/",
+      "url": "https://racdev-portfolio.vercel.app/",
+      "repoUrl": "https://github.com/r-acdev/racdev-portfolio",
       "cv": "https://cv-alejandro-castro.netlify.app/",
       "summary": "Estudiante de Ingeniería en Sistemas con 2+ años de experiencia en front-end (React, Next.js), optimización de rendimiento y diseño responsivo (Tailwind CSS). Colaboración en proyectos back-end (Python con Flask, Node.js con Nest.js, Prisma). Habilidad para adaptarme rápidamente a otros lenguajes de programación o frameworks. Amante de la programación y la tecnología.",
       "location": {

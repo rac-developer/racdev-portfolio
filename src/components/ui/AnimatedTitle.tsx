@@ -31,6 +31,7 @@ export default function AnimatedTitle({
 
       // Animación con ScrollTrigger
       ScrollTrigger.create({
+        // markers:true,
         trigger: triggerElement,
         start: "top 85%", // La animación empieza cuando titleElement 85% superior dtitleElement titleElementemento es visible
         once: true, // La animación solo se ejecuta una vez
@@ -48,7 +49,7 @@ export default function AnimatedTitle({
 
   return (
     <div ref={triggerRef} className={`overflow-hidden ${className}`}>
-      <h1 className="title">
+      <h1>
         <span ref={titleRef} className="inline-block">
           {text}
         </span>

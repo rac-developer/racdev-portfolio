@@ -39,10 +39,8 @@ const Experience = () => {
 
   return (
     <div className="flex flex-col h-full relative">
-      <section className="flex-responsive-center flex-1 overflow-hidden relative px-4">
-
-        <AnimatedTitle text="Experiencia" delay={0.3}/>
-        
+      <AnimatedTitle text="Experiencia" delay={0.3} className="title"/>
+      <section className="flex-1 overflow-hidden relative px-4">
         <ol className="relative border-s border-gray-200">
           {displayedWorks.map(({ name, startDate, endDate, position, skills }: Work, idx) => {
 

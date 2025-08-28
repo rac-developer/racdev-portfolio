@@ -59,7 +59,7 @@ body {
   }
 
   .title-subpage {
-    @apply mb-8 text-5xl font-bold tracking-tight;
+    @apply text-5xl font-bold tracking-tight pb-4;
   }
   .btn-primary {
     @apply bg-primary/90 text-background hover:bg-primary/100;

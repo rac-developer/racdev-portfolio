@@ -1,5 +1,6 @@
 import { work } from "@/database/data.json"
 import SkillBadge from "@/components/ui/SkillBadge"
+import AnimatedTitle from "@/components/ui/AnimatedTitle"
 
 interface Work {
   name: string,
@@ -13,9 +14,9 @@ interface Work {
 export default function page() {
 
   return (
-    <main className="mx-auto flex w-full max-w-3xl flex-auto flex-col px-4 py-12">
-
-      <h1 className="title-subpage text-primary">Experiencia</h1>
+    <main className="mx-auto flex w-full max-w-3xl flex-auto flex-col  py-12">
+      <AnimatedTitle text="Experiencia" delay={0.3} className="title-subpage text-primary"/>
+      <section className="px-4">
         <ol className="relative border-s border-gray-200">
           {work.slice(0, 2).map(({ name, startDate, endDate, position, skills, summary }: Work, idx) => {
 
@@ -45,6 +46,7 @@ export default function page() {
             )
           })}
         </ol>
+      </section>
 
     </main>
   )

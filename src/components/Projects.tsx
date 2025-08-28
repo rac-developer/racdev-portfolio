@@ -31,7 +31,7 @@ const Projects = () => {
   return (
     <section className="relative overflow-hidden justify-center items-center flex flex-col h-full ">
 
-      <AnimatedTitle text="Proyectos" delay={0.5}/>
+      <AnimatedTitle text="Proyectos" delay={0.5} className="title"/>
       
       <div className="relative w-full px-4">
         <div className="max-w-6xl mx-auto">

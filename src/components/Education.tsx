@@ -30,10 +30,8 @@ const Education = () => {
 
   return (
     <div className='flex flex-col h-full relative text-white'>
+      <AnimatedTitle text="Educacion" delay={1.3} className="title"/>
       <section className="flex-responsive-center flex-1 overflow-hidden relative px-4">
-
-        <AnimatedTitle text="Educacion" delay={1.3} />
-
         <ol className="relative border-s border-gray-200">
           {displayedEducation.map(({ institution, area, startDate, endDate }, idx) => {
 

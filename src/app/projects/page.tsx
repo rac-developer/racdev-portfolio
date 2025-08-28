@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { projects } from "@/database/data.json";
 import SkillBadge from "@/components/ui/SkillBadge";
+import AnimatedTitle from "@/components/ui/AnimatedTitle"
 
 function Page() {
   const [loadingStates, setLoadingStates] = useState<{[key: string]: boolean}>({});
@@ -22,9 +23,9 @@ function Page() {
   const handleIframeLoad = (name: string) => setLoadingStates(prev => ({ ...prev, [name]: false }));
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <h1 className="title-subpage text-primary text-center">Proyectos</h1>
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen py-12">
+      <AnimatedTitle text="Proyectos" delay={0.3} className="title-subpage text-primary text-center mb-2"/>
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div
@@ -153,7 +154,7 @@ function Page() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 }
