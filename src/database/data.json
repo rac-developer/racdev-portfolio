@@ -10,7 +10,7 @@
       "url": "https://racdev-portfolio.vercel.app/",
       "repoUrl": "https://github.com/r-acdev/racdev-portfolio",
       "cv": "https://cv-alejandro-castro.netlify.app/",
-      "summary": "Estudiante de Ingeniería en Sistemas con 3+ años de experiencia en desarrollo front-end. Me especializo en la creación de interfaces de usuario y responsivas utilizando tecnologías como React, Next.js y Tailwind CSS. Tengo experiencia con Sass y Redux para la gestión de estilos y estados complejos. Además, he colaborado en proyectos back-end utilizando Python (Flask) y Node.js (Nest.js y Prisma), lo que me permite entender y participar en el ciclo de desarrollo completo.",
+      "summary": "Estudiante de Ingeniería en Sistemas con 3+ años de experiencia en desarrollo front-end y un año de experiencia en back-end. Me especializo en la creación de interfaces de usuario y responsivas utilizando tecnologías como React, Next.js y Tailwind CSS. Tengo experiencia con Sass y Redux para la gestión de estilos y estados complejos. Además, he colaborado en proyectos back-end utilizando Python (Flask) y Node.js (Nest.js y Prisma), lo que me permite entender y participar en el ciclo de desarrollo completo.",
       "location": {
         "address": "Me encuentro en",
         "postalCode": "",
@@ -27,7 +27,7 @@
         },
 
         {
-          "network": "GitHub",
+          "network": "GitHub", 
           "username": "racdeveloper",
           "url": "https://github.com/racdeveloper"
         },
