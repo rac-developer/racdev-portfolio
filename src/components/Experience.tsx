@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { work } from "@/database/data.json"
 import SkillBadge from "./ui/SkillBadge";
 import SeeMore from "./ui/SeeMore"
-import AnimatedTitle from "@/components/ui/AnimatedTitle"
+import AnimatedTitle from "@/components/ui/AnimatedTitle" 
+import useAnimatedDelay from "@/hooks/useAnimatedDelay";
 
 interface Work {
   name: string,
@@ -17,20 +18,19 @@ interface Work {
 
 const Experience = () => {
 
-  const [numToDisplay, setNumToDisplay] = useState(3); // Por defecto muestra 3
+  const [numToDisplay, setNumToDisplay] = useState(3);
+  const titleDelay = useAnimatedDelay(0.3); 
 
   useEffect(() => {
     const handleResize = () => {
-      // Muestra 4 proyectos si la pantalla es menor a 1410px
       if (window.innerWidth < 1500) {
         setNumToDisplay(2);
       } else {
-        // Para anchos de 1500px o más, muestra 2. Puedes ajustar esto.
         setNumToDisplay(2);
       }
     };
 
-    handleResize(); // Se ejecuta al montar para el estado inicial
+    handleResize(); 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -39,7 +39,7 @@ const Experience = () => {
 
   return (
     <div className="flex flex-col h-full relative">
-      <AnimatedTitle text="Experiencia" delay={0.3} className="title"/>
+      <AnimatedTitle text="Experiencia" delay={titleDelay} className="title"/>
       <section className="flex-1 overflow-hidden relative px-4">
         <ol className="relative border-s border-gray-200">
           {displayedWorks.map(({ name, startDate, endDate, position, skills }: Work, idx) => {

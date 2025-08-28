@@ -6,9 +6,11 @@ import { projects } from "@/database/data.json";
 import { ExternalLink, Code2 } from "lucide-react";
 import SeeMore from "./ui/SeeMore";
 import AnimatedTitle from "@/components/ui/AnimatedTitle"
+import useAnimatedDelay from "@/hooks/useAnimatedDelay";
 
 const Projects = () => {
-  const [numToDisplay, setNumToDisplay] = useState(4); // Por defecto muestra 4
+  const [numToDisplay, setNumToDisplay] = useState(4);
+  const titleDelay = useAnimatedDelay(0.5); 
 
   useEffect(() => {
     const handleResize = () => {
@@ -31,7 +33,7 @@ const Projects = () => {
   return (
     <section className="relative overflow-hidden justify-center items-center flex flex-col h-full ">
 
-      <AnimatedTitle text="Proyectos" delay={0.5} className="title"/>
+      <AnimatedTitle text="Proyectos" delay={titleDelay} className="title"/>
       
       <div className="relative w-full px-4">
         <div className="max-w-6xl mx-auto">

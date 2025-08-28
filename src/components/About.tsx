@@ -1,7 +1,6 @@
 import {basics} from "@/database/data.json"
 import AnimatedTitle from "@/components/ui/AnimatedTitle"
 
-
 const About = () => {
   const {summary} = basics
 

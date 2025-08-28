@@ -24,7 +24,7 @@ function Page() {
 
   return (
     <div className="min-h-screen py-12">
-      <AnimatedTitle text="Proyectos" delay={0.3} className="title-subpage text-primary text-center mb-2"/>
+      <AnimatedTitle text="Proyectos" delay={0.1} className="title-subpage text-primary text-center mb-2"/>
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (

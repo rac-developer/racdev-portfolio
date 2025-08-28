@@ -12,7 +12,7 @@ export default function page() {
 
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-auto flex-col px-4 py-8">
-      <AnimatedTitle text="Educación" delay={0.3} className="title-subpage text-primary"/>
+      <AnimatedTitle text="Educación" delay={0.1} className="title-subpage text-primary"/>
       <section className="px-4">
         <ol className="relative border-s border-gray-200">
           {education.map(({ institution, area, startDate, endDate }: Education, idx) => {

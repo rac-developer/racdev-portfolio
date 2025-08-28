@@ -1,15 +1,18 @@
+'use client'
+
 import Link from "next/link"
 import AnimatedContainer from "@/components/ui/AnimatedContainer";
 import {basics} from "@/database/data.json"
 import { FiExternalLink } from "react-icons/fi";
+import useAnimatedDelay from "@/hooks/useAnimatedDelay";
 
 const CV = () => {
 
   const cv = basics.cv
-
+  const titleDelay = useAnimatedDelay(0.7); 
   return (
     <>
-      <AnimatedContainer delay={0.7}>
+      <AnimatedContainer delay={titleDelay}>
         <div className="flex h-full justify-center items-center text-white">
           <Link
             href={cv}

@@ -4,11 +4,12 @@ import { useState, useEffect } from "react";
 import { education }  from '@/database/data.json'
 import SeeMore from './ui/SeeMore'
 import AnimatedTitle from "@/components/ui/AnimatedTitle"
-
+import useAnimatedDelay from "@/hooks/useAnimatedDelay";
 
 const Education = () => {
 
-  const [numToDisplay, setNumToDisplay] = useState(3); // Por defecto muestra 3
+  const [numToDisplay, setNumToDisplay] = useState(3);
+  const titleDelay = useAnimatedDelay(1.3); 
  
   useEffect(() => {
     const handleResize = () => {
@@ -30,7 +31,7 @@ const Education = () => {
 
   return (
     <div className='flex flex-col h-full relative text-white'>
-      <AnimatedTitle text="Educacion" delay={1.3} className="title"/>
+      <AnimatedTitle text="Educacion" delay={titleDelay} className="title"/>
       <section className="flex-responsive-center flex-1 overflow-hidden relative px-4">
         <ol className="relative border-s border-gray-200">
           {displayedEducation.map(({ institution, area, startDate, endDate }, idx) => {
