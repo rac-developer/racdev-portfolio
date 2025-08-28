@@ -46,8 +46,8 @@
     },
     "work": [
       {
-        "name": "Starty",
-        "position": "Desarrollador Front-end",
+        "name": "Freelance | Starty",
+        "position": "Desarrollador Full Stack",
         "skills": [
           "Next.js",
           "Python",
@@ -59,8 +59,9 @@
         "endDate": null,
         "description": "Implementé un servicio de IA con Flask y desarrollé el front-end con Next.js, creando una solución completa.",
         "summary": [
-          "Desarrollo de la interfaz de usuario con Next.js, utilizando JavaScript (ES6+) y TypeScript para la lógica, HTML5 y CSS3 para la estructura base, y Tailwind CSS para la creación rápida de estilos utilitarios y un diseño responsivo.",
-          "Adaptación y transformación de un script de Python existente para la integración de un modelo de inteligencia artificial en un servicio API RESTful con Flask, permitiendo la interacción a través de peticiones POST."
+          "Desarrollo de un dashboard y chatbot de IA usando Next.js",
+          "Desarrollo de landing page usando Vite/React.js.",
+          "Experiencia en desarrollo backend, incluyendo la adaptación de scripts de Python para crear un API RESTful con Flask para la integración de modelos de IA."
         ],
         "highlights": [
           ""
@@ -71,6 +72,8 @@
       "skills": [
         "Next.js",
         "Nest.js",
+        "Prisma",
+        "PostgreSQL",
         "Figma"
       ],
       "url": "https://www.fii.gob.ve/",
@@ -78,12 +81,13 @@
       "endDate": "2024-03-01",
       "description": "Mis inicios se centraron en el desarrollo web con React.js, la implementación de APIs y una colaboración en back-end.",
       "summary": [
-        "Desarrollo de componentes web reutilizables y optimizados con Next.js, enfocándome en la creación de interfaces de usuario dinámicas y eficientes",
-        "Creación de prototipos y diseño de interfaces de usuario en Figma, trabajando en la experiencia de usuario y la consistencia visual.",
-        "Diseño y estilado de la interfaz de usuario utilizando Tailwind CSS para la implementación rápida de estilos y la creación de layouts responsivos.",
-        "Implementación y optimización de peticiones a API REST.",
+        "Diseño de bases de datos.",
+        "Desarrollo de varios sistemas de frontend Next.js",
         "Optimización y refactorización de código existente.",
-        "Colaboración en proyecto back-end utilizando Nest.js con Prisma, participando en el desarrollo de APIs y la gestión de bases de datos."
+        "Soporte y mantenimiento de sitios web desarrollados.",
+        "Implementación y optimización de peticiones a API REST.",
+        "Creación de prototipos y diseño de interfaces de usuario en Figma",
+        "Colaboración en desarrollo backend utilizando Nest.js con Prisma, participando en el desarrollo de APIs y la gestión de bases de datos."
       ],
       "highlights": [
         ""
