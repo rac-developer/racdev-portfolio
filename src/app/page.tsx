@@ -23,9 +23,9 @@ export default function Home() {
   const LocationDelay = useAnimatedDelay(0.6);
   const TimeDelay = useAnimatedDelay(0.7);
   const SkillsDelay = useAnimatedDelay(0.8);
-  const EducationDelay = useAnimatedDelay(0.9);
-  const YoutubeDelay = useAnimatedDelay(1.0);
-  const SocialMediaDelay = useAnimatedDelay(1.1);
+  const EducationDelay = useAnimatedDelay(0.1);
+  const YoutubeDelay = useAnimatedDelay(0.2);
+  const SocialMediaDelay = useAnimatedDelay(0.3);
 
   return (
     <main className="pt-8 pb-6">
