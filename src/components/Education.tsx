@@ -9,7 +9,7 @@ import useAnimatedDelay from "@/hooks/useAnimatedDelay";
 const Education = () => {
 
   const [numToDisplay, setNumToDisplay] = useState(3);
-  const titleDelay = useAnimatedDelay(1.3); 
+  const titleDelay = useAnimatedDelay(1); 
  
   useEffect(() => {
     const handleResize = () => {

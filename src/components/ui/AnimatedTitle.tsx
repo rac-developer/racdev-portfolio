@@ -33,7 +33,7 @@ export default function AnimatedTitle({
       ScrollTrigger.create({
         // markers:true,
         trigger: triggerElement,
-        start: "top 85%", // La animación empieza cuando titleElement 85% superior dtitleElement titleElementemento es visible
+        start: "top 90%", // La animación empieza cuando titleElement 85% superior dtitleElement titleElementemento es visible
         once: true, // La animación solo se ejecuta una vez
         onEnter: () => {
           gsap.to(titleElement, {

@@ -1,15 +1,15 @@
 'use client'
 
 import Link from "next/link"
-import AnimatedContainer from "@/components/ui/AnimatedContainer";
 import {basics} from "@/database/data.json"
 import { FiExternalLink } from "react-icons/fi";
+import AnimatedContainer from "@/components/ui/AnimatedContainer";
 import useAnimatedDelay from "@/hooks/useAnimatedDelay";
 
 const CV = () => {
 
   const cv = basics.cv
-  const titleDelay = useAnimatedDelay(0.7); 
+  const titleDelay = useAnimatedDelay(0.6); 
   return (
     <>
       <AnimatedContainer delay={titleDelay}>

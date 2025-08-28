@@ -13,15 +13,18 @@ const Projects = () => {
   const titleDelay = useAnimatedDelay(0.5); 
 
   useEffect(() => {
-    const handleResize = () => {
-      // Muestra 4 proyectos si la pantalla es menor a 1410px
-      if (window.innerWidth < 1500) {
-        setNumToDisplay(4);
-      } else {
-        // Para anchos de 1410px o más, muestra 2. Puedes ajustar esto.
-        setNumToDisplay(2);
-      }
-    };
+      const handleResize = () => {
+    if (window.innerWidth < 768) {
+      // 📱 En móviles (sm y abajo): 4 proyectos
+      setNumToDisplay(2);
+    } else if (window.innerWidth < 1500) {
+      // 💻 Entre md y 1499px: 4 proyectos
+      setNumToDisplay(4);
+    } else {
+      // 🖥️ Pantallas grandes (≥1500px): 2 proyectos
+      setNumToDisplay(2);
+    }
+  };
 
     handleResize(); // Se ejecuta al montar para el estado inicial
     window.addEventListener('resize', handleResize);

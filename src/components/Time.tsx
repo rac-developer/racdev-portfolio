@@ -16,7 +16,7 @@ const opcionesDiaSemana: Intl.DateTimeFormatOptions = {
 
 const Time = () => {
   const [fechaActual, setFechaActual] = useState(new Date());
-  const titleDelay = useAnimatedDelay(1.1); 
+  const titleDelay = useAnimatedDelay(0.8); 
 
   useEffect(() => {
     const timerID = setInterval(() => {

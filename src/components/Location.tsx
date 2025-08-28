@@ -7,7 +7,7 @@ import useAnimatedDelay from "@/hooks/useAnimatedDelay";
 const Location = () => {
   
   const { city, countryCode } = basics.location;
-  const titleDelay = useAnimatedDelay(0.9); 
+  const titleDelay = useAnimatedDelay(0.7); 
 
   return (
     <>

@@ -15,11 +15,10 @@ interface Work {
   skills: string[]
 }
 
-
 const Experience = () => {
 
   const [numToDisplay, setNumToDisplay] = useState(3);
-  const titleDelay = useAnimatedDelay(0.3); 
+  const titleDelay = useAnimatedDelay(0.4); 
 
   useEffect(() => {
     const handleResize = () => {

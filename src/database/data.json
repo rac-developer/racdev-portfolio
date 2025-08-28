@@ -10,7 +10,7 @@
       "url": "https://racdev-portfolio.vercel.app/",
       "repoUrl": "https://github.com/r-acdev/racdev-portfolio",
       "cv": "https://cv-alejandro-castro.netlify.app/",
-      "summary": "Estudiante de Ingeniería en Sistemas con 2+ años de experiencia en front-end (React, Next.js), optimización de rendimiento y diseño responsivo (Tailwind CSS). Colaboración en proyectos back-end (Python con Flask, Node.js con Nest.js, Prisma). Habilidad para adaptarme rápidamente a otros lenguajes de programación o frameworks. Amante de la programación y la tecnología.",
+      "summary": "Estudiante de Ingeniería en Sistemas con 3+ años de experiencia en desarrollo front-end. Me especializo en la creación de interfaces de usuario y responsivas utilizando tecnologías como React, Next.js y Tailwind CSS. Tengo experiencia con Sass y Redux para la gestión de estilos y estados complejos. Además, he colaborado en proyectos back-end utilizando Python (Flask) y Node.js (Nest.js y Prisma), lo que me permite entender y participar en el ciclo de desarrollo completo.",
       "location": {
         "address": "Me encuentro en",
         "postalCode": "",
@@ -47,7 +47,7 @@
     "work": [
       {
         "name": "Starty",
-        "position": "Desarrollador Front-end y Back-end",
+        "position": "Desarrollador Front-end",
         "skills": [
           "Next.js",
           "Python",
@@ -56,7 +56,7 @@
         ],
         "url": "",
         "startDate": "2024-04-01",
-        "endDate": "2025-03-01",
+        "endDate": null,
         "description": "Implementé un servicio de IA con Flask y desarrollé el front-end con Next.js, creando una solución completa.",
         "summary": [
           "Desarrollo de la interfaz de usuario con Next.js, utilizando JavaScript (ES6+) y TypeScript para la lógica, HTML5 y CSS3 para la estructura base, y Tailwind CSS para la creación rápida de estilos utilitarios y un diseño responsivo.",
