@@ -12,7 +12,7 @@ import SocialMedia from "@/components/SocialMedia";
 
 export default function Home() {
   return (
-    <main className="pt-8 pb-16">
+    <main className="pt-8 pb-6">
 
       {/* Grid principal */}
       <div className="grid grid-cols-1 gap-4 min-h-0 overflow-y-auto xl:grid-cols-4 xl:auto-rows-[minmax(130px,auto)] xl:h-auto xl:overflow-visible">
@@ -33,15 +33,15 @@ export default function Home() {
           <Projects />
         </div>
 
-        <div className="card-style background-style xl:row-span-1 xl:col-start-1 xl:row-start-4 relative h-full">
+        <div className="card-text background-style xl:row-span-1 xl:col-start-1 xl:row-start-4 relative h-full">
           <CV />
         </div>
 
-        <div className="card-style background-style xl:row-span-1 xl:col-start-2 xl:row-start-4 relative h-full">
+        <div className="card-text background-style xl:row-span-1 xl:col-start-2 xl:row-start-4 relative h-full">
           <Location />
         </div>
 
-        <div className="card-style background-style xl:row-span-1 xl:col-start-3 xl:row-start-4 relative h-full">
+        <div className="card-text background-style xl:row-span-1 xl:col-start-3 xl:row-start-4 relative h-full">
           <Time />
         </div>
 

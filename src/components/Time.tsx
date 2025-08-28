@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import AnimatedContainer from "@/components/ui/AnimatedContainer";
 
 const opcionesFecha: Intl.DateTimeFormatOptions = {
   year: 'numeric',
@@ -31,11 +32,15 @@ const Time = () => {
   const diaSemana = fechaActual.toLocaleDateString('es-ES', opcionesDiaSemana);
 
   return (
-    <div className="flex flex-col h-full justify-center items-center">
-      <h2 className="text-5xl font-bold text-white">{horaFormateada}</h2>
-      <p className="text-xl text-gray-300 capitalize">{diaSemana}</p>
-      <p className="text-base text-gray-400">{fechaFormateada}</p>
-    </div>
+    <>
+      <AnimatedContainer delay={1.1}>
+        <div className="flex flex-col h-full justify-center items-center">
+          <h2 className="text-5xl font-bold text-white">{horaFormateada}</h2>
+          <p className="text-xl text-gray-300 capitalize">{diaSemana}</p>
+          <p className="text-base text-gray-400">{fechaFormateada}</p>
+        </div>
+      </AnimatedContainer>
+    </>
   );
 };
 

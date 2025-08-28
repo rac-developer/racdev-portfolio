@@ -55,7 +55,7 @@ body {
   }
 
   .title{
-    @apply font-bold text-2xl xl:text-4xl pb-4;
+    @apply font-bold text-3xl xl:text-4xl pb-4;
   }
 
   .title-subpage {
@@ -71,12 +71,19 @@ body {
     @apply !bg-transparent border border-secundary-bg;
   }
 
+  .card-text {
+    @apply rounded-lg p-4 box-border justify-center items-center flex;
+  }
   .card-style {
     @apply rounded-lg p-4 box-border;
   }
 
   .card-style > *:first-child {
     @apply mt-0;
+  }
+
+  .card-other {
+    @apply rounded-lg p-4 box-border;
   }
 
   .card-photo {

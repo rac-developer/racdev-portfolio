@@ -5,6 +5,7 @@ import Image from "next/image";
 import { projects } from "@/database/data.json";
 import { ExternalLink, Code2 } from "lucide-react";
 import SeeMore from "./ui/SeeMore";
+import AnimatedTitle from "@/components/ui/AnimatedTitle"
 
 const Projects = () => {
   const [numToDisplay, setNumToDisplay] = useState(4); // Por defecto muestra 4
@@ -29,7 +30,9 @@ const Projects = () => {
 
   return (
     <section className="relative overflow-hidden justify-center items-center flex flex-col h-full ">
-      <h2 className="title text-center">Proyectos</h2>
+
+      <AnimatedTitle text="Proyectos" delay={0.5}/>
+      
       <div className="relative w-full px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">

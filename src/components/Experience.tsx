@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { work } from "@/database/data.json"
 import SkillBadge from "./ui/SkillBadge";
 import SeeMore from "./ui/SeeMore"
+import AnimatedTitle from "@/components/ui/AnimatedTitle"
 
 interface Work {
   name: string,
@@ -39,7 +40,9 @@ const Experience = () => {
   return (
     <div className="flex flex-col h-full relative">
       <section className="flex-responsive-center flex-1 overflow-hidden relative px-4">
-        <h1 className="title">Experiencia</h1>
+
+        <AnimatedTitle text="Experiencia" delay={0.3}/>
+        
         <ol className="relative border-s border-gray-200">
           {displayedWorks.map(({ name, startDate, endDate, position, skills }: Work, idx) => {
 

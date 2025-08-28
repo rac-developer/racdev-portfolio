@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { education }  from '@/database/data.json'
 import SeeMore from './ui/SeeMore'
+import AnimatedTitle from "@/components/ui/AnimatedTitle"
+
 
 const Education = () => {
 
@@ -29,7 +31,9 @@ const Education = () => {
   return (
     <div className='flex flex-col h-full relative text-white'>
       <section className="flex-responsive-center flex-1 overflow-hidden relative px-4">
-        <h2 className="title mb-1">Educación</h2>
+
+        <AnimatedTitle text="Educacion" delay={1.3} />
+
         <ol className="relative border-s border-gray-200">
           {displayedEducation.map(({ institution, area, startDate, endDate }, idx) => {
 
