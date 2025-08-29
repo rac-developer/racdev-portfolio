@@ -63,7 +63,7 @@
           "Desarrollo de un dashboard y chatbot de IA usando Next.js",
           "Desarrollo de landing page usando Vite/React.js.",
           "Contenerización de la aplicación con Docker para asegurar un despliegue consistente y portable.",
-          "Experiencia en desarrollo backend, incluyendo la adaptación de scripts de Python para crear un API RESTful con Flask para la integración de modelos de IA."
+          "Desarrollo de adaptación de script de Python para crear un API RESTful con Flask para la integración de modelos de IA."
         ],
         "highlights": [
           ""
@@ -94,7 +94,6 @@
       "highlights": [
         ""
       ]}
-
   ],
     "volunteer": [{
       "organization": "Organization",
