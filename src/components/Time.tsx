@@ -15,10 +15,14 @@ const opcionesDiaSemana: Intl.DateTimeFormatOptions = {
 };
 
 const Time = () => {
-  const [fechaActual, setFechaActual] = useState(new Date());
+
+  const [fechaActual, setFechaActual] = useState<Date | null>(null);
   const titleDelay = useAnimatedDelay(0.3); 
 
   useEffect(() => {
+
+    setFechaActual(new Date());
+
     const timerID = setInterval(() => {
       setFechaActual(new Date());
     }, 1000);
@@ -27,6 +31,10 @@ const Time = () => {
       clearInterval(timerID);
     };
   }, []);
+
+  if (!fechaActual) {
+    return null;
+  }
 
   // Formateamos la fecha, el día y la hora
   const fechaFormateada = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
