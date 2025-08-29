@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -12,6 +12,7 @@ interface AnimatedCardProps {
   className?: string;
   immediate?: boolean;   // anima al cargar
   mid?: boolean;         // anima al llegar a la mitad del viewport
+  forceImmediateOnDesktop?: boolean; // 👈 nuevo
 }
 
 export default function AnimatedCard({
@@ -20,9 +21,19 @@ export default function AnimatedCard({
   className = "",
   immediate = false,
   mid = false,
+  forceImmediateOnDesktop = false,
 }: AnimatedCardProps) {
-  
   const triggerRef = useRef<HTMLDivElement | null>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1280px)"); // xl
+    setIsDesktop(mq.matches);
+
+    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   useEffect(() => {
     const el = triggerRef.current;
@@ -30,8 +41,10 @@ export default function AnimatedCard({
 
     gsap.set(el, { y: "100%", opacity: 0 });
 
-    if (immediate) {
-      // 🚀 Anima apenas carga
+    const shouldImmediate = immediate || (isDesktop && forceImmediateOnDesktop);
+
+    if (shouldImmediate) {
+      // 🚀 Animación apenas carga
       gsap.to(el, {
         y: "0%",
         opacity: 1,
@@ -42,9 +55,8 @@ export default function AnimatedCard({
     } else {
       // 🎯 Animación con scroll
       ScrollTrigger.create({
-        // markers:true,
         trigger: el,
-        start: mid ? "top " : "top 95%",
+        start: mid ? "top 65%" : "top 10%",
         end: "bottom 80%",
         once: true,
         onEnter: () => {
@@ -58,7 +70,7 @@ export default function AnimatedCard({
         },
       });
     }
-  }, [delay, immediate, mid]);
+  }, [delay, immediate, mid, isDesktop, forceImmediateOnDesktop]);
 
   return (
     <div ref={triggerRef} className={`${className}`}>
@@ -66,5 +78,3 @@ export default function AnimatedCard({
     </div>
   );
 }
-
-
