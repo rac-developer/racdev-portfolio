@@ -19,6 +19,7 @@ import AnimatedCard from "@/components/ui/AnimatedCard";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  
   const mainGridRef = useRef<HTMLDivElement | null>(null);
   const [isDesktop, setIsDesktop] = useState(false);
 
