@@ -10,7 +10,7 @@
       "url": "https://racdev-portfolio.vercel.app/",
       "repoUrl": "https://github.com/r-acdev/racdev-portfolio",
       "cv": "https://cv-alejandro-castro.netlify.app/",
-      "summary": "Estudiante de Ingeniería en Sistemas con 3+ años de experiencia en desarrollo front-end y un año de experiencia en back-end. Me especializo en la creación de interfaces de usuario y responsivas utilizando tecnologías como React, Next.js y Tailwind CSS. Tengo experiencia con Sass y Redux para la gestión de estilos y estados complejos. Además, he colaborado en proyectos back-end utilizando Python (Flask) y Node.js (Nest.js y Prisma), lo que me permite entender y participar en el ciclo de desarrollo completo.",
+      "summary": "Estudiante de Ingeniería en Sistemas con 3+ años de experiencia en desarrollo front-end y un año de experiencia en back-end. Me especializo en la creación de interfaces de usuario y responsivas utilizando tecnologías como React, Next.js y Tailwind CSS. Tengo experiencia con Sass y Redux para la gestión de estilos y estados complejos. Además, he colaborado en proyectos back-end utilizando Python (Flask) y Node.js (Nest.js y Prisma), y cuento con experiencia en la contenerización de aplicaciones con Docker.",
       "location": {
         "address": "Me encuentro en",
         "postalCode": "",
@@ -52,6 +52,7 @@
           "Next.js",
           "Python",
           "IA",
+          "Docker",
           "Remote"
         ],
         "url": "",
@@ -61,6 +62,7 @@
         "summary": [
           "Desarrollo de un dashboard y chatbot de IA usando Next.js",
           "Desarrollo de landing page usando Vite/React.js.",
+          "Contenerización de la aplicación con Docker para asegurar un despliegue consistente y portable.",
           "Experiencia en desarrollo backend, incluyendo la adaptación de scripts de Python para crear un API RESTful con Flask para la integración de modelos de IA."
         ],
         "highlights": [
