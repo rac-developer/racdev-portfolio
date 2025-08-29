@@ -33,35 +33,35 @@ export default function Home() {
       {/* Grid principal */}
       <div className="grid grid-cols-1 gap-4 min-h-0 overflow-y-auto xl:grid-cols-4 xl:auto-rows-[minmax(130px,auto)] xl:h-auto xl:overflow-visible">
 
-        <AnimatedCard delay={AboutDelay} forceImmediateOnDesktop className="card-style background-style xl:col-span-3 xl:row-span-1 relative h-full">
+        <AnimatedCard delay={AboutDelay}  className="card-style background-style xl:col-span-3 xl:row-span-1 relative h-full">
           <About />
         </AnimatedCard>
 
-        <AnimatedCard delay={PhotoDelay} forceImmediateOnDesktop className="card-photo background-style xl:row-span-4 xl:col-start-4 relative h-full">
+        <AnimatedCard delay={PhotoDelay}  className="card-photo background-style xl:row-span-4 xl:col-start-4 relative h-full">
           <Photo />
         </AnimatedCard>
 
-        <AnimatedCard forceImmediateOnDesktop  delay={ExperienceDelay} className="card-style background-style xl:row-span-2 xl:row-start-2 relative h-full">
+        <AnimatedCard delay={ExperienceDelay} className="card-style background-style xl:row-span-2 xl:row-start-2 relative h-full">
           <Experience />
         </AnimatedCard>
 
-        <AnimatedCard forceImmediateOnDesktop  delay={ProjectsDelay} className="card-style background-style xl:col-span-2 xl:row-span-2 xl:row-start-2 relative h-full">
+        <AnimatedCard delay={ProjectsDelay} className="card-style background-style xl:col-span-2 xl:row-span-2 xl:row-start-2 relative h-full">
           <Projects />
         </AnimatedCard>
 
-        <AnimatedCard forceImmediateOnDesktop  delay={CVDelay} className="card-text background-style xl:row-span-1 xl:col-start-1 xl:row-start-4 relative h-full">
+        <AnimatedCard delay={CVDelay} className="card-text background-style xl:row-span-1 xl:col-start-1 xl:row-start-4 relative h-full">
           <CV />
         </AnimatedCard>
 
-        <AnimatedCard forceImmediateOnDesktop  delay={LocationDelay} className="card-text background-style xl:row-span-1 xl:col-start-2 xl:row-start-4 relative h-full">
+        <AnimatedCard delay={LocationDelay} className="card-text background-style xl:row-span-1 xl:col-start-2 xl:row-start-4 relative h-full">
           <Location />
         </AnimatedCard>
 
-        <AnimatedCard forceImmediateOnDesktop  delay={TimeDelay} className="card-text background-style xl:row-span-1 xl:col-start-3 xl:row-start-4 relative h-full">
+        <AnimatedCard delay={TimeDelay} className="card-text background-style xl:row-span-1 xl:col-start-3 xl:row-start-4 relative h-full">
           <Time />
         </AnimatedCard>
 
-        <AnimatedCard forceImmediateOnDesktop  delay={SkillsDelay} className="card-style background-style xl:col-span-4 xl:row-start-5 relative h-full">
+        <AnimatedCard delay={SkillsDelay} className="card-style background-style xl:col-span-4 xl:row-start-5 relative h-full">
           <Skills />
         </AnimatedCard>
       </div>
