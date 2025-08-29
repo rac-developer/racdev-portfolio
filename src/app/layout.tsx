@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${primaryFont.variable} min-h-svh overflow-x-hidden flex flex-col`}>
+      <body className={`${primaryFont.variable} min-h-dvh overflow-x-hidden flex flex-col`}>
         
         <div className="sticky top-0 z-50 py-4 px-4 xl:px-8 mb-4 bg-background">
           <Header />
