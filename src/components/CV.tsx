@@ -9,10 +9,10 @@ import useAnimatedDelay from "@/hooks/useAnimatedDelay";
 const CV = () => {
 
   const cv = basics.cv
-  const titleDelay = useAnimatedDelay(0.6); 
+  const titleDelay = useAnimatedDelay(0.1); 
   return (
     <>
-      <AnimatedContainer delay={titleDelay}>
+      <AnimatedContainer scrollTriggered delay={titleDelay}>
         <div className="flex h-full justify-center items-center text-white">
           <Link
             href={cv}

@@ -11,6 +11,7 @@ interface AnimatedCardProps {
   delay?: number;
   className?: string;
   mid?: boolean;
+  scrollTriggered?: boolean; // Nueva prop para controlar si usa ScrollTrigger
 }
 
 export default function AnimatedCard({
@@ -18,53 +19,42 @@ export default function AnimatedCard({
   delay = 0,
   className = "",
   mid = false,
+  scrollTriggered = false, // Por defecto, no usa ScrollTrigger
 }: AnimatedCardProps) {
   const triggerRef = useRef<HTMLDivElement | null>(null);
 
-  // Usamos useLayoutEffect para animaciones, previene parpadeos (flickering)
   useLayoutEffect(() => {
     const el = triggerRef.current;
     if (!el) return;
 
-    // Creamos un contexto de GSAP para un cleanup automático y seguro en React
-    const ctx = gsap.context(() => {
-      // Ocultamos la tarjeta inicialmente
-      gsap.set(el, { y: "50px", opacity: 0 });
+    gsap.set(el, { y: "50px", opacity: 0 }); // Estado inicial
 
-      const animation = gsap.to(el, {
-        y: "0px",
-        opacity: 1,
-        ease: "back.out(1.2)",
-        delay,
-        duration: 0.6,
+    const animation = gsap.to(el, {
+      y: "0px",
+      opacity: 1,
+      ease: "back.out(1.2)",
+      delay,
+      duration: 0.6,
+      paused: true, // La animación empieza pausada
+    });
+
+    if (scrollTriggered) {
+      // Si scrollTriggered es true, usamos ScrollTrigger
+      const st = ScrollTrigger.create({
+        trigger: el,
+        start: mid ? "top 65%" : "top 90%",
+        once: true,
+        onEnter: () => animation.play(), // Reproduce la animación al entrar
       });
 
-      // Usamos matchMedia para la lógica responsive
-      ScrollTrigger.matchMedia({
-        // ✅ Lógica para ESCRITORIO (coincide con el breakpoint 'xl' de Tailwind)
-        "(min-width: 1280px)": function () {
-          // En escritorio, simplemente ejecutamos la animación.
-          // Las tarjetas del segundo grid estarán fuera de la vista y se animarán
-          // cuando el usuario baje, dando el efecto deseado.
-          animation.play();
-        },
-
-        // ✅ Lógica para MÓVIL (y tablets)
-        "(max-width: 1279px)": function () {
-          // En móvil, activamos la animación con ScrollTrigger
-          ScrollTrigger.create({
-            trigger: el,
-            start: mid ? "top 65%" : "top 90%", // Ajustado para mejor visibilidad en móvil
-            once: true,
-            onEnter: () => animation.play(),
-          });
-        },
-      });
-    }, triggerRef);
-
-    // Cleanup del contexto al desmontar el componente
-    return () => ctx.revert();
-  }, [delay, mid]);
+      return () => {
+        if (st) st.kill(); // Limpiar ScrollTrigger
+      };
+    } else {
+      // Si no es por scroll (ej. animación al cargar), la reproducimos directamente
+      animation.play();
+    }
+  }, [delay, mid, scrollTriggered]); // Asegúrate de que todas las dependencias estén aquí
 
   return (
     <div ref={triggerRef} className={`${className}`}>

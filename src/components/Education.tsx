@@ -9,7 +9,7 @@ import useAnimatedDelay from "@/hooks/useAnimatedDelay";
 const Education = () => {
 
   const [numToDisplay, setNumToDisplay] = useState(3);
-  const titleDelay = useAnimatedDelay(1); 
+  const titleDelay = useAnimatedDelay(0.1); 
  
   useEffect(() => {
     const handleResize = () => {
@@ -31,7 +31,7 @@ const Education = () => {
 
   return (
     <div className='flex flex-col h-full relative text-white'>
-      <AnimatedTitle text="Educacion" delay={titleDelay} className="title"/>
+      <AnimatedTitle scrollTriggered text="Educacion" delay={titleDelay} className="title"/>
       <section className="flex-responsive-center flex-1 overflow-hidden relative px-4">
         <ol className="relative border-s border-gray-200">
           {displayedEducation.map(({ institution, area, startDate, endDate }, idx) => {

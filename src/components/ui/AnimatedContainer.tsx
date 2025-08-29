@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, type ReactNode } from "react";
+import { useLayoutEffect, useRef, type ReactNode } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -10,45 +10,59 @@ interface AnimatedContainerProps {
   children: ReactNode;
   delay?: number;
   className?: string;
+  scrollTriggered?: boolean; // Nueva prop para control
 }
 
 export default function AnimatedContainer({
   children,
   delay = 0,
   className = "",
+  scrollTriggered = false, // Por defecto, anima al cargar
 }: AnimatedContainerProps) {
-  
-  const triggerRef = useRef<HTMLDivElement | null>(null);
-  const animatedElementRef = useRef<HTMLDivElement | null>(null);
+  const componentRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    const triggerElement = triggerRef.current;
-    const animatedElement = animatedElementRef.current;
+  useLayoutEffect(() => {
+    // Creamos el contexto de GSAP
+    const ctx = gsap.context(() => {
+      // El elemento a animar es el primer hijo del div principal
+      const animatedElement = componentRef.current?.children[0];
+      if (!animatedElement) return;
 
-    if (triggerElement && animatedElement) {
-      // Estado inicial: invisible y desplazado hacia abajo
-      gsap.set(animatedElement, { y: "100%", opacity: 0 });
+      // Estado inicial
+      gsap.set(animatedElement, { y: "50px", opacity: 0 });
 
-      // Animación controlada por ScrollTrigger
-      ScrollTrigger.create({
-        trigger: triggerElement,
-        start: "top 85%", // La animación empieza cuando el 85% superior del elemento es visible
-        once: true, // La animación solo se ejecuta una vez
-        onEnter: () => {
-          gsap.to(animatedElement, {
-            y: "0%",
-            opacity: 1,
-            ease: "power3.out",
-            delay,
-          });
-        },
+      // Definimos la animación en estado pausado
+      const animation = gsap.to(animatedElement, {
+        y: "0px",
+        opacity: 1,
+        ease: "power3.out",
+        delay,
+        duration: 0.8,
+        paused: true,
       });
-    }
-  }, [delay]);
+
+      if (scrollTriggered) {
+        // Si se activa por scroll, creamos el trigger
+        ScrollTrigger.create({
+          trigger: componentRef.current,
+          start: "top 85%",
+          once: true,
+          onEnter: () => animation.play(),
+        });
+      } else {
+        // Si no, la reproducimos directamente
+        animation.play();
+      }
+    }, componentRef);
+
+    // Limpieza del contexto
+    return () => ctx.revert();
+  }, [delay, scrollTriggered]);
 
   return (
-    <div ref={triggerRef} className={`overflow-hidden ${className}`}>
-      <div ref={animatedElementRef}>{children}</div>
+    <div ref={componentRef} className={`overflow-hidden ${className}`}>
+      {/* El div hijo ya no necesita una ref separada */}
+      <div>{children}</div>
     </div>
   );
 }

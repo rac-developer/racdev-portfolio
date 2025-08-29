@@ -7,11 +7,11 @@ import useAnimatedDelay from "@/hooks/useAnimatedDelay";
 const Location = () => {
   
   const { city, countryCode } = basics.location;
-  const titleDelay = useAnimatedDelay(0.7); 
+  const titleDelay = useAnimatedDelay(0.2); 
 
   return (
     <>
-      <AnimatedContainer delay={titleDelay}>
+      <AnimatedContainer scrollTriggered delay={titleDelay}>
         <div className="flex flex-col h-full justify-center text-center">
           <h2 className="text-4xl font-bold">
             Me encuentro en {city}, {countryCode}{" "}

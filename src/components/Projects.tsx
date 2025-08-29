@@ -36,7 +36,7 @@ const Projects = () => {
   return (
     <section className="relative overflow-hidden justify-center items-center flex flex-col h-full ">
 
-      <AnimatedTitle text="Proyectos" delay={titleDelay} className="title"/>
+      <AnimatedTitle scrollTriggered text="Proyectos" delay={titleDelay} className="title"/>
       
       <div className="relative w-full px-4">
         <div className="max-w-6xl mx-auto">

@@ -16,7 +16,7 @@ const opcionesDiaSemana: Intl.DateTimeFormatOptions = {
 
 const Time = () => {
   const [fechaActual, setFechaActual] = useState(new Date());
-  const titleDelay = useAnimatedDelay(0.8); 
+  const titleDelay = useAnimatedDelay(0.3); 
 
   useEffect(() => {
     const timerID = setInterval(() => {
@@ -35,7 +35,7 @@ const Time = () => {
 
   return (
     <>
-      <AnimatedContainer delay={titleDelay}>
+      <AnimatedContainer scrollTriggered delay={titleDelay}>
         <div className="flex flex-col h-full justify-center items-center">
           <h2 className="text-5xl font-bold text-white">{horaFormateada}</h2>
           <p className="text-xl text-gray-300 capitalize">{diaSemana}</p>

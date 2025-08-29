@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -10,49 +10,59 @@ interface AnimatedTitleProps {
   text: string;
   delay?: number;
   className?: string;
+  scrollTriggered?: boolean; // Nueva prop para control
 }
 
 export default function AnimatedTitle({
   text,
   delay = 0,
   className = "",
+  scrollTriggered = false, // Por defecto, anima al cargar
 }: AnimatedTitleProps) {
+  const componentRef = useRef<HTMLDivElement | null>(null);
 
-  const titleRef = useRef<HTMLSpanElement | null>(null);
-  const triggerRef = useRef<HTMLDivElement | null>(null);
+  useLayoutEffect(() => {
+    // Usamos el div principal como el "escopo" para el contexto de GSAP
+    const ctx = gsap.context(() => {
+      // Seleccionamos el span dentro del contexto para animarlo
+      const titleElement = componentRef.current?.querySelector("span");
+      if (!titleElement) return;
 
-  useEffect(() => {
-    const triggerElement = triggerRef.current;
-    const titleElement = titleRef.current;
-
-    if (titleElement && triggerElement) {
-      // Estado inicial: invisible y desplazado hacia abajo
+      // Estado inicial
       gsap.set(titleElement, { y: "100%", opacity: 0 });
 
-      // Animación con ScrollTrigger
-      ScrollTrigger.create({
-        // markers:true,
-        trigger: triggerElement,
-        start: "top 90%", // La animación empieza cuando titleElement 85% superior dtitleElement titleElementemento es visible
-        once: true, // La animación solo se ejecuta una vez
-        onEnter: () => {
-          gsap.to(titleElement, {
-            y: "0%",
-            opacity: 1,
-            ease: "power3.out",
-            delay,
-          });
-        },
+      // Definimos la animación, pero la dejamos en pausa
+      const animation = gsap.to(titleElement, {
+        y: "0%",
+        opacity: 1,
+        ease: "power3.out",
+        delay,
+        duration: 0.8,
+        paused: true,
       });
-    }
-  }, [delay]);
+
+      if (scrollTriggered) {
+        // Si se activa por scroll, creamos el trigger
+        ScrollTrigger.create({
+          trigger: componentRef.current,
+          start: "top 90%",
+          once: true,
+          onEnter: () => animation.play(),
+        });
+      } else {
+        // Si no, la reproducimos directamente
+        animation.play();
+      }
+    }, componentRef); // El contexto se aplica al elemento principal
+
+    // Limpieza automática del contexto al desmontar el componente
+    return () => ctx.revert();
+  }, [delay, scrollTriggered, text]);
 
   return (
-    <div ref={triggerRef} className={`overflow-hidden ${className}`}>
+    <div ref={componentRef} className={`overflow-hidden ${className}`}>
       <h1>
-        <span ref={titleRef} className="inline-block">
-          {text}
-        </span>
+        <span className="inline-block">{text}</span>
       </h1>
     </div>
   );
