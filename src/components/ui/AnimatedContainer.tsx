@@ -10,28 +10,26 @@ interface AnimatedContainerProps {
   children: ReactNode;
   delay?: number;
   className?: string;
-  scrollTriggered?: boolean; // Nueva prop para control
+  scrollTriggered?: boolean; 
 }
 
 export default function AnimatedContainer({
   children,
   delay = 0,
   className = "",
-  scrollTriggered = false, // Por defecto, anima al cargar
+  scrollTriggered = false, 
 }: AnimatedContainerProps) {
   const componentRef = useRef<HTMLDivElement | null>(null);
 
   useLayoutEffect(() => {
-    // Creamos el contexto de GSAP
+    
     const ctx = gsap.context(() => {
-      // El elemento a animar es el primer hijo del div principal
+      
       const animatedElement = componentRef.current?.children[0];
       if (!animatedElement) return;
 
-      // Estado inicial
       gsap.set(animatedElement, { y: "50px", opacity: 0 });
-
-      // Definimos la animación en estado pausado
+      
       const animation = gsap.to(animatedElement, {
         y: "0px",
         opacity: 1,
@@ -42,7 +40,7 @@ export default function AnimatedContainer({
       });
 
       if (scrollTriggered) {
-        // Si se activa por scroll, creamos el trigger
+        
         ScrollTrigger.create({
           trigger: componentRef.current,
           start: "top 85%",
@@ -50,12 +48,11 @@ export default function AnimatedContainer({
           onEnter: () => animation.play(),
         });
       } else {
-        // Si no, la reproducimos directamente
+        
         animation.play();
       }
     }, componentRef);
 
-    // Limpieza del contexto
     return () => ctx.revert();
   }, [delay, scrollTriggered]);
 

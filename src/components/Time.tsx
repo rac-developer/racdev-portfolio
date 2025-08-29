@@ -36,7 +36,6 @@ const Time = () => {
     return null;
   }
 
-  // Formateamos la fecha, el día y la hora
   const fechaFormateada = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
   const horaFormateada = fechaActual.toLocaleTimeString('es-ES');
   const diaSemana = fechaActual.toLocaleDateString('es-ES', opcionesDiaSemana);

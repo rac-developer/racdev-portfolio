@@ -10,16 +10,14 @@ interface AnimatedCardProps {
   children: ReactNode;
   delay?: number;
   className?: string;
-  mid?: boolean;
-  scrollTriggered?: boolean; // Nueva prop para controlar si usa ScrollTrigger
+  scrollTriggered?: boolean; 
 }
 
 export default function AnimatedCard({
   children,
   delay = 0,
   className = "",
-  mid = false,
-  scrollTriggered = false, // Por defecto, no usa ScrollTrigger
+  scrollTriggered = false,
 }: AnimatedCardProps) {
   const triggerRef = useRef<HTMLDivElement | null>(null);
 
@@ -27,7 +25,7 @@ export default function AnimatedCard({
     const el = triggerRef.current;
     if (!el) return;
 
-    gsap.set(el, { y: "50px", opacity: 0 }); // Estado inicial
+    gsap.set(el, { y: "50px", opacity: 0 });
 
     const animation = gsap.to(el, {
       y: "0px",
@@ -35,26 +33,24 @@ export default function AnimatedCard({
       ease: "back.out(1.2)",
       delay,
       duration: 0.6,
-      paused: true, // La animación empieza pausada
+      paused: true,
     });
 
     if (scrollTriggered) {
-      // Si scrollTriggered es true, usamos ScrollTrigger
       const st = ScrollTrigger.create({
         trigger: el,
-        start: mid ? "top 65%" : "top 90%",
+        start: "top 90%",
         once: true,
-        onEnter: () => animation.play(), // Reproduce la animación al entrar
+        onEnter: () => animation.play(),
       });
 
       return () => {
-        if (st) st.kill(); // Limpiar ScrollTrigger
+        if (st) st.kill();
       };
     } else {
-      // Si no es por scroll (ej. animación al cargar), la reproducimos directamente
       animation.play();
     }
-  }, [delay, mid, scrollTriggered]); // Asegúrate de que todas las dependencias estén aquí
+  }, [delay, scrollTriggered]);
 
   return (
     <div ref={triggerRef} className={`${className}`}>
