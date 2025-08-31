@@ -35,11 +35,12 @@ html, body, #__next { height: 100%; }
 body {
   margin: 0;
   background: var(--background);
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-primary);
   font-weight: 300;
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 @layer utilities {

@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Inter  } from "next/font/google";
-import "../ui/globals.css";
+// import { Inter  } from "next/font/google";
+import "@/ui/globals.css";
 import { Header } from "@/components/Header";
 import Footer from "@/components/Footer";
+import { primaryFont } from "@/ui/font";
 
-const primaryFont = Inter ({
-  variable: "--font-inter-sans",
-  subsets: ["latin"]
-});
+// const primaryFont = Inter ({
+//   variable: "--font-inter-sans",
+//   subsets: ["latin"]
+// });
 
 export const metadata: Metadata = {
   title: "Rodolfo Alejandro Castro Developer",
