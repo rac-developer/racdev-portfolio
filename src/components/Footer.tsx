@@ -6,7 +6,7 @@ const Footer = () => {
   const url = basics.repoUrl
 
   return (
-    <footer className='py-6'>
+    <footer>
       <div className="w-full max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-none mx-auto px-6 sm:px-10 xl:px-10 border-t flex flex-col items-center border-secundary-bg">
         <div className="flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row pt-6 md:pt-0">
           <p className="text-center text-sm leading-loose text-muted-foreground">
