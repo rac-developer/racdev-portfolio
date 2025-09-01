@@ -5,6 +5,7 @@ import {
   SiPostgresql, SiNodedotjs, SiNestjs, SiGit, SiPrisma, SiVercel
 } from 'react-icons/si';
 import { IoLogoJavascript } from "react-icons/io";
+import { FaJava } from "react-icons/fa";
 
 const size: number = 50;
 
@@ -14,6 +15,7 @@ const technologies = [
   { name: 'JavaScript', icon: <IoLogoJavascript size={size} /> },
   { name: 'TypeScript', icon: <SiTypescript size={size} /> },
   { name: 'React', icon: <SiReact size={size} /> },
+  { name: 'Java', icon: <FaJava size={size} /> },
   { name: 'Next.js', icon: <SiNextdotjs size={size} /> },
   { name: 'Tailwind CSS', icon: <SiTailwindcss size={size} /> },
   { name: 'Sass', icon: <SiSass size={size} /> },
