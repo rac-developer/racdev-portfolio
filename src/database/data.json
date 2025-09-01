@@ -1,73 +1,71 @@
 {
-    "basics": {
-      "name": "Rodolfo Alejandro Castro",
-      "layout": "Desarrollador Front-End",
-      "label": "Estudiante de ingeniería enfocado en el desarrollo de productos de alta calidad.",
-      "image": "",
-      "email": "soyracm@gmail.com",
-      "phone": "",
-      "videoYT": "dQw4w9WgXcQ",
-      "url": "https://racdev-portfolio.vercel.app/",
-      "repoUrl": "https://github.com/r-acdev/racdev-portfolio",
-      "cv": "https://racdev-cv.netlify.app/",
-      "summary": "Estudiante de Ingeniería en Sistemas con 3+ años de experiencia en desarrollo front-end y un año de experiencia en back-end. Me especializo en la creación de interfaces de usuario y responsivas utilizando tecnologías como React, Next.js y Tailwind CSS. Tengo experiencia con Sass y Redux para la gestión de estilos y estados complejos. Además, he colaborado en proyectos back-end utilizando Python (Flask) y Node.js (Nest.js y Prisma), y cuento con experiencia en la contenerización de aplicaciones con Docker.",
-      "location": {
-        "address": "Me encuentro en",
-        "postalCode": "",
-        "city": "Caracas",
-        "countryCode": "Ven",
-        "region": "Venezuela"
-      },
-      "profiles": [
-      
-        {
-          "network": "LinkedIn",
-          "username": "racdeveloper",
-          "url": "https://linkedin.com/in/racdeveloper"
-        },
-
-        {
-          "network": "GitHub", 
-          "username": "rac-developer",
-          "url": "https://github.com/rac-developer"
-        },
-
-        {
-          "network": "Youtube",
-          "username": "racdeveloper",
-          "url": "https://youtube.com/@racdeveloper"
-        },
-        {
-          "network": "X",
-          "username": "racdevelop3r",
-          "url": "https://x.com/racdevelop3r"
-        }
-    ]
+  "basics": {
+    "name": "Rodolfo Alejandro Castro",
+    "layout": "Desarrollador Front-End",
+    "label": "Estudiante de ingeniería enfocado en el desarrollo de productos de alta calidad.",
+    "image": "",
+    "email": "soyracm@gmail.com",
+    "phone": "",
+    "videoYT": "dQw4w9WgXcQ",
+    "url": "https://racdev-portfolio.vercel.app/",
+    "repoUrl": "https://github.com/r-acdev/racdev-portfolio",
+    "cv": "https://racdev-cv.netlify.app/",
+    "summary": "Estudiante de Ingeniería en Sistemas con 3+ años de experiencia en desarrollo front-end y un año de experiencia en back-end. Me especializo en la creación de interfaces de usuario y responsivas utilizando tecnologías como React, Next.js y Tailwind CSS. Tengo experiencia con Sass y Redux para la gestión de estilos y estados complejos. Además, he colaborado en proyectos back-end utilizando Python (Flask) y Node.js (Nest.js y Prisma), y cuento con experiencia en la contenerización de aplicaciones con Docker.",
+    "location": {
+      "address": "Me encuentro en",
+      "postalCode": "",
+      "city": "Caracas",
+      "countryCode": "Ven",
+      "region": "Venezuela"
     },
-    "work": [
+    "profiles": [
+    
       {
-        "name": "Freelance | Starty",
-        "position": "Desarrollador Full Stack",
-        "skills": [
-          "Next.js",
-          "Python",
-          "IA",
-          "Docker",
-          "Remote"
-        ],
-        "url": "",
-        "startDate": "2024-04-01",
-        "endDate": null,
-        "description": "Implementé un servicio de IA con Flask y desarrollé el front-end con Next.js, creando una solución completa.",
-        "summary": [
-          "Desarrollo de un dashboard y chatbot de IA usando Next.js",
-          "Desarrollo de landing page usando Vite/React.js.",
-          "Contenerización de la aplicación con Docker para asegurar un despliegue consistente y portable.",
-          "Desarrollo de adaptación de script de Python para crear una API RESTful con Flask para la integración de modelos de IA."
-        ],
-        "highlights": [
-          ""
-        ]},
+        "network": "LinkedIn",
+        "username": "racdeveloper",
+        "url": "https://linkedin.com/in/racdeveloper"
+      },
+      {
+        "network": "GitHub", 
+        "username": "rac-developer",
+        "url": "https://github.com/rac-developer"
+      },
+      {
+        "network": "Youtube",
+        "username": "racdeveloper",
+        "url": "https://youtube.com/@racdeveloper"
+      },
+      {
+        "network": "X",
+        "username": "racdevelop3r",
+        "url": "https://x.com/racdevelop3r"
+      }
+  ]
+  },
+  "work": [
+    {
+      "name": "Freelance | Starty",
+      "position": "Desarrollador Full Stack",
+      "skills": [
+        "Next.js",
+        "Python",
+        "IA",
+        "Docker",
+        "Remote"
+      ],
+      "url": "",
+      "startDate": "2024-04-01",
+      "endDate": null,
+      "description": "",
+      "summary": [
+        "Desarrollo de un dashboard y chatbot de IA usando Next.js",
+        "Desarrollo de landing's pages usando Vite/React.js.",
+        "Contenerización de la aplicación con Docker.",
+        "Desarrollo de adaptación de script de Python para crear un API RESTful con Flask para la integración de modelos de IA."
+      ],
+      "highlights": [
+        ""
+      ]},
       {
       "name": "Fundación Instituto de Ingeniería",
       "position": "Desarrollador Front-end",
@@ -75,25 +73,25 @@
         "Next.js",
         "Nest.js",
         "Prisma",
+        "Java",
         "PostgreSQL",
         "Figma"
       ],
       "url": "https://www.fii.gob.ve/",
       "startDate": "2022-10-01",
       "endDate": "2024-03-01",
-      "description": "Mis inicios se centraron en el desarrollo web con React.js, la implementación de APIs y una colaboración en back-end.",
+      "description": "",
       "summary": [
-        "Diseño de bases de datos.",
-        "Desarrollo de varios sistemas de frontend Next.js",
-        "Optimización y refactorización de código existente.",
-        "Soporte y mantenimiento de sitios web desarrollados.",
-        "Implementación y optimización de peticiones a API REST.",
-        "Creación de prototipos y diseño de interfaces de usuario en Figma",
-        "Colaboración en desarrollo backend utilizando Nest.js con Prisma, participando en el desarrollo de APIs y la gestión de bases de datos."
+        "Diseño y creación de bases de datos.",
+        "Desarrollo front-end de sistemas en Next.js.",
+        "Optimización y refactorización de código existente en Java.",
+        "Creación de prototipos y diseño de interfaces de usuario en Figma.",
+        "Soporte y mantenimiento de microservicios desarrollados en Nest.js."
       ],
       "highlights": [
         ""
-      ]}
+      ]
+    }
   ],
     "volunteer": [{
       "organization": "Organization",
@@ -142,12 +140,41 @@
 
     "skills": [
       {
-      "id":"1",
-      "keyword": "JavaScript",
-      "image": "/skills/javascript.svg"
-      }
+      "name": "Experto",
+      "level": "Experto",
+      "keywords": [
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "Astro",
+        "Redux",
+        "Tailwind CSS",
+        "Sass",
+        "GSAP",
+        "Docker",
+        "Figma"
+      ]
+    },
+    {
+      "name": "Intermedio",
+      "level": "Intermedio",
+      "keywords": [
+        "Java",
+        "Python",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "Basico",
+      "level": "Basico",
+      "keywords": [
+        "Node.js",
+        "Nest.js",
+        "Prisma"
+      ]
+    }
   ],
-
     "languages": [{
       "language": "English",
       "fluency": "Native speaker"
@@ -166,12 +193,12 @@
     "projects": [
       {
         "name": "Disney Plus Front",
-        "github": "https://github.com/r-acdev/react-js/tree/main/projects/07-disney-clone",
+        "github": "https://github.com/rac-developer/react-js/tree/main/projects/07-disney-clone",
         "isActive": true, 
         "up": "Al poner arriba false, cambia al logo de git hub",
         "startDate": "2024-02-10", 
         "endDate": "2021-13-10",
-        "description": "Frontend de Disney Plus desarrollado con React, TypeScript y Tailwind CSS.",
+        "description": "FDesarrollo del frontend de Disney Plus con React, TypeScript y Tailwind CSS, manejando peticiones asíncronas a una API REST para la visualización de contenido.",
         "skills": [
           "React.js",
           "TypeScript",
@@ -182,10 +209,8 @@
       },
       {
         "name": "Tic tac toe",
-        "github": "https://github.com/r-acdev/react-js/tree/main/projects/01-tic-tac-toe",
+        "github": "https://github.com/rac-developer/react-js/tree/main/projects/01-tic-tac-toe",
         "isActive": true,
-        "startDate": "2024-17-10",
-        "endDate": "2021-23-10",
         "description": "Implementación de juego de tres en raya con historial de jugadas y lógica de ganador.",
         "skills": [
           "React.js"
@@ -195,10 +220,8 @@
       },
       {
         "name": "X Card",
-        "github": "https://github.com/r-acdev/react-js/tree/main/projects/02-x-card",
+        "github": "https://github.com/rac-developer/react-js/tree/main/projects/02-x-card",
         "isActive": true,
-        "startDate": "2024-17-10",
-        "endDate": "2021-23-10",
         "description": "Página web interactiva en React con funcionalidad de seguimiento de usuarios, basada en componentes reutilizables.",
         "skills": [
           "React.js"
@@ -208,60 +231,53 @@
       },
       {
         "name": "Proyectos en Next.js",
-        "github": "https://github.com/r-acdev/next-js",
+        "github": "https://github.com/rac-developer/next-js",
         "isActive": false,
-        "startDate": "2024-17-10",
-        "endDate": "2021-23-10",
         "description": "Colección de proyectos y componentes desarrollados con Next.js, TypeScript, Tailwind CSS, entre otras tecnologías.",
         "skills": [
           "Next.js",
           "TypeScript",
-          "Tailwind CSS"
+          "Tailwind CSS",
+          "Redux"
         ],
-        "url": "https://github.com/r-acdev/next-js",
+        "url": "https://github.com/rac-developer/next-js",
         "image": "/projects/"
       },
       {
         "name": "Proyectos en React.js",
-        "github": "https://github.com/r-acdev/react-js",
+        "github": "https://github.com/rac-developer/react-js",
         "isActive": false,
-        "startDate": "2024-17-10",
-        "endDate": "2021-23-10",
         "description": "Colección de proyectos y componentes en React.js, enfocados en funcionalidades individuales.",
         "skills": [
           "JavaScript",
           "TypeScript",
           "Tailwind CSS",
-          "Redux"
+          "GSAP"
         ],
-        "url": "https://github.com/r-acdev/react-js",
+        "url": "https://github.com/rac-developer/react-js",
         "image": "/projects/"
       },
       {
         "name": "Proyectos en Nest.js",
-        "github": "https://github.com/r-acdev/nest-js",
+        "github": "https://github.com/rac-developer/nest-js",
         "isActive": false,
-        "startDate": "2024-17-10",
-        "endDate": "2021-23-10",
         "description": "Colección de proyectos backend desarrollados con Nest.js, entre otras tecnologías.",
         "skills": [
           "Nest.js",
           "Prisma"
         ],
-        "url": "https://github.com/r-acdev/nest-js",
+        "url": "https://github.com/rac-developer/nest-js",
         "image": "/projects/"
       },
       {
         "name": "Proyectos en Python",
-        "github": "https://github.com/r-acdev/python",
+        "github": "https://github.com/rac-developer/python",
         "isActive": false,
-        "startDate": "2024-17-10",
-        "endDate": "2021-23-10",
         "description": "Colección de proyectos y scripts desarrollados en Python.",
         "skills": [
           "Python"
         ],
-        "url": "https://github.com/r-acdev/python",
+        "url": "https://github.com/rac-developer/python",
         "image": "/projects/"
       }
     ]
