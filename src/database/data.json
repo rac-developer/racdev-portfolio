@@ -279,6 +279,29 @@
         ],
         "url": "https://github.com/rac-developer/python",
         "image": "/projects/"
+      },
+      {
+        "name": "Proyectos en Nest.js",
+        "github": "https://github.com/rac-developer/nest-js",
+        "isActive": false,
+        "description": "Colección de proyectos backend desarrollados con Nest.js, entre otras tecnologías.",
+        "skills": [
+          "Nest.js",
+          "Prisma"
+        ],
+        "url": "https://github.com/rac-developer/nest-js",
+        "image": "/projects/"
+      },
+      {
+        "name": "Proyectos en Java",
+        "github": "https://github.com/rac-developer/Java",
+        "isActive": false,
+        "description": "Colección de proyectos y scripts desarrollados en Java.",
+        "skills": [
+          "Java"
+        ],
+        "url": "https://github.com/rac-developer/Java",
+        "image": "/projects/"
       }
     ]
   }
