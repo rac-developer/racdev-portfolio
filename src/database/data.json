@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Rodolfo Alejandro Castro",
-    "layout": "Desarrollador Front-End",
+    "layout": "Desarrollador Full Stack enfocado en Front-end",
     "label": "Estudiante de ingeniería enfocado en el desarrollo de productos de alta calidad.",
     "image": "",
     "email": "soyracm@gmail.com",
@@ -10,7 +10,7 @@
     "url": "https://racdev-portfolio.vercel.app/",
     "repoUrl": "https://github.com/r-acdev/racdev-portfolio",
     "cv": "https://racdev-cv.netlify.app/",
-    "summary": "Estudiante de Ingeniería en Sistemas con 3+ años de experiencia en desarrollo front-end y un año de experiencia en back-end. Me especializo en la creación de interfaces de usuario y responsivas utilizando tecnologías como React, Next.js y Tailwind CSS. Tengo experiencia con Sass y Redux para la gestión de estilos y estados complejos. Además, he colaborado en proyectos back-end utilizando Python (Flask) y Node.js (Nest.js y Prisma), y cuento con experiencia en la contenerización de aplicaciones con Docker.",
+    "summary": "Soy un Estudiante de Ingeniería en Sistemas con más de 3 años de experiencia en desarrollo full-stack. Me especializo en la creación de interfaces de usuario modernas con Next.js y Astro, y tengo experiencia en el desarrollo back-end utilizando Python y Node.js (Nest.js con Prisma), lo que me permite trabajar en el ciclo de vida completo del software. Además, he creado agentes de IA con Python y participé en la migración de una herramienta de firmas digitales de Java a Python para sistemas Windows y Linux.",
     "location": {
       "address": "Me encuentro en",
       "postalCode": "",
@@ -44,7 +44,7 @@
   },
   "work": [
     {
-      "name": "Freelance | Starty",
+      "name": "Co-fundador | Starty",
       "position": "Desarrollador Full Stack",
       "skills": [
         "Next.js",
@@ -61,18 +61,19 @@
         "Desarrollo de un dashboard y chatbot de IA usando Next.js",
         "Desarrollo de landing's pages usando Vite/React.js.",
         "Contenerización de la aplicación con Docker.",
-        "Desarrollo de adaptación de script de Python para crear un API RESTful con Flask para la integración de modelos de IA."
+        "Desarrollo de modelos de agentes autónomos y sistemas multi-agente utilizando Python.",
+        "Adaptación de script de Python para crear un API RESTful con Flask para la integración de modelos de IA."
       ],
       "highlights": [
         ""
       ]},
       {
       "name": "Fundación Instituto de Ingeniería",
-      "position": "Desarrollador Front-end",
+      "position": "Desarrollador",
       "skills": [
         "Next.js",
-        "Nest.js",
-        "Prisma",
+        "Node.js",
+        "Python",
         "Java",
         "PostgreSQL",
         "Figma"
@@ -84,9 +85,10 @@
       "summary": [
         "Diseño y creación de bases de datos.",
         "Desarrollo front-end de sistemas en Next.js.",
-        "Optimización y refactorización de código existente en Java.",
+        "Mantenimiento de código existente en Java.",
         "Creación de prototipos y diseño de interfaces de usuario en Figma.",
-        "Soporte y mantenimiento de microservicios desarrollados en Nest.js."
+        "Soporte y mantenimiento de microservicios desarrollados en Node(Nest.js con Prisma).",
+        "Migración de una herramienta de firmas digitales de Java a Python para sistemas Windows y Linux."
       ],
       "highlights": [
         ""
