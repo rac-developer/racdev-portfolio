@@ -1,8 +1,6 @@
 'use client'
 
 import { useLayoutEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "@/components/About";
 import CV from "@/components/CV";
 import Education from "@/components/Education";
@@ -15,8 +13,6 @@ import SocialMedia from "@/components/SocialMedia";
 import Time from "@/components/Time";
 import Youtube from "@/components/Youtube";
 import AnimatedCard from "@/components/ui/AnimatedCard";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   
@@ -38,40 +34,59 @@ export default function Home() {
   };
 
   useLayoutEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1280px)");
+    let gsapInstance: any;
+    let ScrollTriggerInstance: any;
+    let ctx: any;
 
-    const handleMediaQueryChange = (e: MediaQueryListEvent | MediaQueryList) => {
-      setIsDesktop(e.matches);
-      ScrollTrigger.refresh();
+    const loadGSAP = async () => {
+      const GSAP = await import("gsap");
+      const ScrollTrigger = await import("gsap/ScrollTrigger");
+      gsapInstance = GSAP.gsap;
+      ScrollTriggerInstance = ScrollTrigger.ScrollTrigger;
+      gsapInstance.registerPlugin(ScrollTriggerInstance);
+
+      const mediaQuery = window.matchMedia("(min-width: 1280px)");
+
+      const handleMediaQueryChange = (e: MediaQueryListEvent | MediaQueryList) => {
+        setIsDesktop(e.matches);
+        if (ScrollTriggerInstance) {
+          ScrollTriggerInstance.refresh();
+        }
+      };
+
+      mediaQuery.addEventListener("change", handleMediaQueryChange);
+      handleMediaQueryChange(mediaQuery);
+
+      if (mainGridRef.current) {
+        gsapInstance.set(mainGridRef.current, { visibility: 'visible' });
+      }
+
+      ctx = gsapInstance.context(() => {
+        ScrollTriggerInstance.matchMedia({
+          "(min-width: 1280px)": function () {
+            if (mainGridRef.current) {
+              mainGridRef.current.style.overflowY = "visible";
+              mainGridRef.current.style.minHeight = "auto";
+              mainGridRef.current.style.height = "auto";
+            }
+          },
+          "(max-width: 1279px)": function () {
+            if (mainGridRef.current) {
+              mainGridRef.current.style.overflowY = "visible"
+              mainGridRef.current.style.minHeight = "0"
+              mainGridRef.current.style.height = "auto"
+            }
+          },
+        });
+      }, mainGridRef);
     };
 
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-    handleMediaQueryChange(mediaQuery);
-
-    gsap.set(mainGridRef.current, { visibility: 'visible' });
-
-    const ctx = gsap.context(() => {
-      ScrollTrigger.matchMedia({
-        "(min-width: 1280px)": function () {
-          if (mainGridRef.current) {
-            mainGridRef.current.style.overflowY = "visible";
-            mainGridRef.current.style.minHeight = "auto";
-            mainGridRef.current.style.height = "auto";
-          }
-        },
-        "(max-width: 1279px)": function () {
-          if (mainGridRef.current) {
-            mainGridRef.current.style.overflowY = "visible"
-            mainGridRef.current.style.minHeight = "0"
-            mainGridRef.current.style.height = "auto"
-          }
-        },
-      });
-    }, mainGridRef)
+    loadGSAP();
 
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-      ctx.revert()
+      if (ctx) {
+        ctx.revert();
+      }
     };
   }, []);
 
