@@ -1,16 +1,30 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
   images: {
-    unoptimized: true,
-    remotePatterns: [],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'screenshot.abstractapi.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.microlink.io',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.netlify.app',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.youtube.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com', // Para las miniaturas de YouTube
+      },
+    ],
   },
-  swcMinify: true,
-  experimental: {
-    optimizeCss: true
-  },
-  
 };
 
 export default nextConfig;
