@@ -97,13 +97,13 @@ const Projects = () => {
               </div>
             ))}
           </div>
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </div>
       </div>
 
-      <div className="relative z-10 mt-auto pt-4 bg-background/80 backdrop-blur-sm">
-        <SeeMore link='/projects' />
-      </div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 " />
+        <div className="relative z-10 mt-auto pt-4">
+          <SeeMore link='/experience'/>
+        </div>
     </section>
   );
 }

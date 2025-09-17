@@ -51,11 +51,11 @@ const Education = () => {
           })}
         </ol>
         
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-30 bg-gradient-to-t from-background/80 to-transparent"/>
       </section>
       
-      <div className="relative z-10 mt-auto pt-4 bg-background/80 backdrop-blur-sm">
-        <SeeMore link='/education'/>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 " />
+      <div className="relative z-10 mt-auto pt-4">
+        <SeeMore link='/experience'/>
       </div>
     </div>
   )

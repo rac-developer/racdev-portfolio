@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 const DESKTOP_IMAGE = '/me-desktop.png'
 const MOBILE_IMAGE = '/me-mobile.png'
 
-function Photo() {
+const Photo = () => {
   const [imageSrc, setImageSrc] = useState(DESKTOP_IMAGE)
 
   useEffect(() => {

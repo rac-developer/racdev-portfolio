@@ -83,35 +83,35 @@ export default function Home() {
       {/* Grid principal */}
       <div ref={mainGridRef} className="grid grid-cols-1 gap-4 xl:grid-cols-4 xl:auto-rows-[minmax(130px,auto)] invisible">
 
-        <AnimatedCard delay={delays.About} scrollTriggered={scrollTriggered} className="card-style background-style xl:col-span-3 xl:row-span-1 relative h-full">
+        <AnimatedCard delay={delays.About} scrollTriggered={scrollTriggered} className="card-style background-style xl:col-span-3 xl:row-span-1 relative h-full glass-effect">
           <About />
         </AnimatedCard>
 
-        <AnimatedCard delay={delays.Photo} scrollTriggered={scrollTriggered} className="card-photo background-style xl:row-span-4 xl:col-start-4 relative h-full">
+        <AnimatedCard delay={delays.Photo} scrollTriggered={scrollTriggered} className="card-photo background-style xl:row-span-4 xl:col-start-4 relative h-full glass-effect">
           <Photo />
         </AnimatedCard>
 
-        <AnimatedCard delay={delays.Experience} scrollTriggered={scrollTriggered} className="card-style background-style xl:row-span-2 xl:row-start-2 relative h-full">
+        <AnimatedCard delay={delays.Experience} scrollTriggered={scrollTriggered} className="card-style background-style xl:row-span-2 xl:row-start-2 relative h-full glass-effect">
           <Experience />
         </AnimatedCard>
 
-        <AnimatedCard delay={delays.Projects} scrollTriggered={scrollTriggered} className="card-style background-style xl:col-span-2 xl:row-span-2 xl:row-start-2 relative h-full">
+        <AnimatedCard delay={delays.Projects} scrollTriggered={scrollTriggered} className="card-style background-style xl:col-span-2 xl:row-span-2 xl:row-start-2 relative h-full glass-effect">
           <Projects />
         </AnimatedCard>
 
-        <AnimatedCard delay={delays.CV} scrollTriggered={scrollTriggered} className="card-text background-style xl:row-span-1 xl:col-start-1 xl:row-start-4 relative h-full">
+        <AnimatedCard delay={delays.CV} scrollTriggered={scrollTriggered} className="card-text background-style xl:row-span-1 xl:col-start-1 xl:row-start-4 relative h-full glass-effect">
           <CV />
         </AnimatedCard>
 
-        <AnimatedCard delay={delays.Location} scrollTriggered={scrollTriggered} className="card-text background-style xl:row-span-1 xl:col-start-2 xl:row-start-4 relative h-full">
+        <AnimatedCard delay={delays.Location} scrollTriggered={scrollTriggered} className="card-text background-style xl:row-span-1 xl:col-start-2 xl:row-start-4 relative h-full glass-effect">
           <Location />
         </AnimatedCard>
 
-        <AnimatedCard delay={delays.Time} scrollTriggered={scrollTriggered} className="card-text background-style xl:row-span-1 xl:col-start-3 xl:row-start-4 relative h-full">
+        <AnimatedCard delay={delays.Time} scrollTriggered={scrollTriggered} className="card-text background-style xl:row-span-1 xl:col-start-3 xl:row-start-4 relative h-full glass-effect">
           <Time />
         </AnimatedCard>
 
-        <AnimatedCard delay={delays.Skills} scrollTriggered={scrollTriggered} className="card-style background-style xl:col-span-4 xl:row-start-5 relative h-full">
+        <AnimatedCard delay={delays.Skills} scrollTriggered={scrollTriggered} className="card-style background-style xl:col-span-4 xl:row-start-5 relative h-full glass-effect">
           <Skills />
         </AnimatedCard>
       </div>
@@ -119,15 +119,15 @@ export default function Home() {
       {/* Grid secundario */}
       <div className="grid grid-cols-1 xl:grid-cols-4 gap-4 mt-4 xl:auto-rows-[minmax(400px,auto)]">
 
-        <AnimatedCard delay={delays.Education} scrollTriggered={true} className="card-style background-style h-full xl:col-span-1">
+        <AnimatedCard delay={delays.Education} scrollTriggered={true} className="card-style background-style h-full xl:col-span-1 glass-effect">
           <Education />
         </AnimatedCard>
 
-        <AnimatedCard delay={delays.Youtube} scrollTriggered={true} className="card-style background-style xl:col-span-2 h-full">
+        <AnimatedCard delay={delays.Youtube} scrollTriggered={true} className="card-style background-style xl:col-span-2 h-full glass-effect">
           <Youtube />
         </AnimatedCard>
 
-        <AnimatedCard delay={delays.SocialMedia} scrollTriggered={true} className="rounded-xl xl:col-span-1 h-full">
+        <AnimatedCard delay={delays.SocialMedia} scrollTriggered={true} className="rounded-xl xl:col-span-1 h-full glass-effect">
           <SocialMedia />
         </AnimatedCard>
       </div>

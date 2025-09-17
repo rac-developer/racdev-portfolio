@@ -91,3 +91,13 @@ body {
     @apply rounded-lg;
   }
 }
+
+.glass-effect {
+  @apply bg-secundary-bg/10 backdrop-blur-lg;
+}
+.card-style, .card-photo, .card-text {
+  position: relative;
+}
+.glass-gradient {
+  @apply bg-gradient-to-t from-secundary-bg/10 to-transparent;
+}
