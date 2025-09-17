@@ -59,9 +59,10 @@
       "description": "",
       "summary": [
         "Desarrollo de un dashboard y chatbot de IA usando Next.js",
-        "Desarrollo de landing's pages usando Vite/React.js.",
         "Contenerización de la aplicación con Docker.",
-        "Desarrollo de modelos de agentes autónomos y sistemas multi-agente utilizando Python.",
+        "Desarrollo de landing's pages usando Vite/React.js.",
+        "Optimizar procesos y estructuras de datos para mejorar eficiencia y rendimiento.",
+        "Servicios en Python (APIs y microservicios) y Django.",
         "Adaptación de script de Python para crear un API RESTful con Flask para la integración de modelos de IA."
       ],
       "highlights": [
@@ -200,7 +201,7 @@
         "up": "Al poner arriba false, cambia al logo de git hub",
         "startDate": "2024-02-10", 
         "endDate": "2021-13-10",
-        "description": "FDesarrollo del frontend de Disney Plus con React, TypeScript y Tailwind CSS, manejando peticiones asíncronas a una API REST para la visualización de contenido.",
+        "description": "Desarrollo del frontend de Disney Plus con React, TypeScript y Tailwind CSS, manejando peticiones asíncronas a una API REST para la visualización de contenido.",
         "skills": [
           "React.js",
           "TypeScript",

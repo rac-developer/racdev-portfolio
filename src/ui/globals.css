@@ -4,12 +4,12 @@
 html, body, #__next { height: 100%; }
 
 :root {
-  --background: #001418;
+  --background: #0a0c0f;
   --foreground: #fff;
   --primary: #FC741E;
   --primary-other: #6d120f;
   --secundary: #33dfff;
-  --secundary-other: #036056;
+  --secundary-other: #253b56;
 }
 
 @theme {
