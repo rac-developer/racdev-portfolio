@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={`${primaryFont.variable} min-h-dvh overflow-x-hidden flex flex-col relative`}> 
         <GridBackground /> {/* Coloca el componente aquí */}
         
-        <div className="sticky top-0 z-50 py-4 px-4 xl:px-8 mb-4 bg-background">
+        <div className="sticky top-0 z-50 py-4 px-4 xl:px-8 mb-4">
           <Header />
         </div>
 
