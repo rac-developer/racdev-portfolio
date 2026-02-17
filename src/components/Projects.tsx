@@ -102,7 +102,7 @@ const Projects = () => {
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 " />
         <div className="relative z-10 mt-auto pt-4">
-          <SeeMore link='/experience'/>
+          <SeeMore link='/projects'/>
         </div>
     </section>
   );

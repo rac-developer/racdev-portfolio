@@ -211,6 +211,18 @@
         "image": "/projects/disney.png"
       },
       {
+        "name": "Template de CV con Astro",
+        "github": "https://github.com/rac-developer/astro/tree/main/01-template-minimalist-cv",
+        "isActive": true,
+        "description": "Aplicación web desarrollada con Astro y React que permite a los usuarios crear, personalizar y exportar su currículum. Implementa edición de datos, carga de imágenes y generación de archivos PDF.",
+        "skills": [
+          "Astro",
+          "React.js"
+        ],
+        "url": "https://racdeveloper-template-cv.vercel.app/",
+        "image": "/projects/template-cv.png"
+      },
+      {
         "name": "Tic tac toe",
         "github": "https://github.com/rac-developer/react-js/tree/main/projects/01-tic-tac-toe",
         "isActive": true,
