@@ -10,7 +10,7 @@
     "url": "https://racdev-portfolio.vercel.app/",
     "repoUrl": "https://github.com/r-acdev/racdev-portfolio",
     "cv": "https://racdev-cv.netlify.app/",
-    "summary": "Soy un Estudiante de Ingeniería en Sistemas con más de 3 años de experiencia en desarrollo full-stack. Me especializo en la creación de interfaces de usuario modernas con Next.js y Astro, y tengo experiencia en el desarrollo back-end utilizando Python y Node.js (Nest.js con Prisma), lo que me permite trabajar en el ciclo de vida completo del software. Además, he creado agentes de IA con Python y participé en la migración de una herramienta de firmas digitales de Java a Python para sistemas Windows y Linux.",
+    "summary": "Soy un Estudiante de Ingeniería en Sistemas con más de 3 años de experiencia en desarrollo full-stack. Me especializo en la creación de interfaces de usuario modernas con Next.js y Astro, y tengo experiencia en el desarrollo back-end utilizando Python y Node.js (Nest.js con Prisma), lo que me permite trabajar en el ciclo de vida completo del software.",
     "location": {
       "address": "Me encuentro en",
       "postalCode": "",
@@ -43,6 +43,32 @@
   ]
   },
   "work": [
+      {
+      "name": "Fundación Instituto de Ingeniería",
+      "position": "Desarrollador",
+      "skills": [
+        "Next.js",
+        "Python",
+        "Nest.js",
+        "PostgreSQL",
+        "Figma"
+      ],
+      "url": "https://www.fii.gob.ve/",
+      "startDate": "2022-10-01",
+      "endDate": null,
+      "description": "",
+      "summary": [
+        "Mantenimiento de código existente en Java.",
+        "Desarrollo front-end de sistemas en Next.js.",
+        "Diseño y creación de bases de datos en PostgreSQL.",
+        "Creación de prototipos y diseño de interfaces de usuario en Figma.",
+        "Soporte y mantenimiento de microservicios desarrollados en Nest.js.",
+        "Migración de una herramienta de firmas digitales de Java a Python para sistemas Windows y Linux."
+      ],
+      "highlights": [
+        ""
+      ]
+    },
     {
       "name": "Co-fundador | Starty",
       "position": "Desarrollador Full Stack",
@@ -55,46 +81,17 @@
       ],
       "url": "",
       "startDate": "2024-04-01",
-      "endDate": null,
+      "endDate": "2026-01-01",
       "description": "",
       "summary": [
         "Desarrollo de un dashboard y chatbot de IA usando Next.js",
         "Contenerización de la aplicación con Docker.",
         "Desarrollo de landing's pages usando Vite/React.js.",
-        "Optimizar procesos y estructuras de datos para mejorar eficiencia y rendimiento.",
-        "Servicios en Python (APIs y microservicios) y Django.",
         "Adaptación de script de Python para crear un API RESTful con Flask para la integración de modelos de IA."
       ],
       "highlights": [
         ""
-      ]},
-      {
-      "name": "Fundación Instituto de Ingeniería",
-      "position": "Desarrollador",
-      "skills": [
-        "Next.js",
-        "Node.js",
-        "Python",
-        "Java",
-        "PostgreSQL",
-        "Figma"
-      ],
-      "url": "https://www.fii.gob.ve/",
-      "startDate": "2022-10-01",
-      "endDate": "2024-03-01",
-      "description": "",
-      "summary": [
-        "Diseño y creación de bases de datos.",
-        "Desarrollo front-end de sistemas en Next.js.",
-        "Mantenimiento de código existente en Java.",
-        "Creación de prototipos y diseño de interfaces de usuario en Figma.",
-        "Soporte y mantenimiento de microservicios desarrollados en Node(Nest.js con Prisma).",
-        "Migración de una herramienta de firmas digitales de Java a Python para sistemas Windows y Linux."
-      ],
-      "highlights": [
-        ""
-      ]
-    }
+      ]}
   ],
     "volunteer": [{
       "organization": "Organization",

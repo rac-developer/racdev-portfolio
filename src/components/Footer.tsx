@@ -12,7 +12,8 @@ const Footer = () => {
           <p className="text-center text-sm leading-loose text-muted-foreground">
             Desarrollado con
             <span className="font-semibold text-secundary"> Next.js</span>,
-            <span className="font-semibold text-secundary"> TypeScript</span> y
+            <span className="font-semibold text-secundary"> TypeScript</span>,
+            <span className="font-semibold text-secundary"> GASP</span> y
             <span className="font-semibold text-secundary"> Tailwind CSS</span>.
             <br />
             El código fuente está disponible en{" "}
