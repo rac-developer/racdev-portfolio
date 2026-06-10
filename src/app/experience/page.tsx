@@ -1,6 +1,7 @@
 import prisma from "@/database/client"
 import SkillBadge from "@/components/ui/SkillBadge"
 import AnimatedTitle from "@/components/ui/AnimatedTitle"
+import { Work as PrismaWork, Skill as PrismaSkill } from '@prisma/client'
 
 interface Work {
   name: string,
@@ -19,9 +20,9 @@ export default async function page() {
     orderBy: { order: 'asc' }
   });
 
-  const work = workRaw.map((w: any) => ({
+  const work = workRaw.map((w: PrismaWork & { skills: PrismaSkill[] }) => ({
     ...w,
-    skills: w.skills.map((s: any) => s.name)
+    skills: w.skills.map((s: PrismaSkill) => s.name)
   }))
 
   return (
