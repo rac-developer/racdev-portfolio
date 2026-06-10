@@ -1,9 +1,9 @@
 import React from 'react'
 import { FaYoutube, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import data from '@/database/data.json'
 
-const SocialMedia = () => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const SocialMedia = ({ profiles }: { profiles: any[] }) => {
   const colorText = 'text-gray-500 hover:text-secundary transition-colors'
 
   const iconMap: { [key: string]: React.ElementType } = {
@@ -13,7 +13,7 @@ const SocialMedia = () => {
     'GitHub': FaGithub,
   };
 
-  const socialLinks = data.basics.profiles.map(profile => ({
+  const socialLinks = profiles.map(profile => ({
     name: profile.network,
     url: profile.url,
     icon: iconMap[profile.network],

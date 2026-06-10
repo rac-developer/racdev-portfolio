@@ -1,4 +1,4 @@
-import { work } from "@/database/data.json"
+import prisma from "@/database/client"
 import SkillBadge from "@/components/ui/SkillBadge"
 import AnimatedTitle from "@/components/ui/AnimatedTitle"
 
@@ -11,7 +11,17 @@ interface Work {
   summary: string[]
 }
 
-export default function page() {
+export const revalidate = 60;
+
+export default async function page() {
+  const workRaw = await prisma.work.findMany({
+    include: { skills: true }
+  });
+
+  const work = workRaw.map(w => ({
+    ...w,
+    skills: w.skills.map(s => s.name)
+  }))
 
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-auto flex-col  py-12">

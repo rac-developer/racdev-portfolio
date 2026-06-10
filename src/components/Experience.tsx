@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { work } from "@/database/data.json"
 import SkillBadge from "./ui/SkillBadge";
 import SeeMore from "./ui/SeeMore"
 import AnimatedTitle from "@/components/ui/AnimatedTitle" 
@@ -15,7 +14,7 @@ interface Work {
   skills: string[]
 }
 
-const Experience = () => {
+const Experience = ({ work }: { work: Work[] }) => {
 
   const [numToDisplay, setNumToDisplay] = useState(3);
   const titleDelay = useAnimatedDelay(0.4); 

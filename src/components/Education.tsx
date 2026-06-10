@@ -1,13 +1,12 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { education }  from '@/database/data.json'
 import SeeMore from './ui/SeeMore'
 import AnimatedTitle from "@/components/ui/AnimatedTitle"
 import useAnimatedDelay from "@/hooks/useAnimatedDelay";
 
-const Education = () => {
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Education = ({ education }: { education: any[] }) => {
   const [numToDisplay, setNumToDisplay] = useState(3);
   const titleDelay = useAnimatedDelay(0.1); 
  

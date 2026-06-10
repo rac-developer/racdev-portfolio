@@ -1,11 +1,10 @@
 'use client'
 
 import React from 'react'
-import { basics } from "@/database/data.json"
 import { useOnlineStatus } from '@/hooks/useOnlineStatus';
 
-const Youtube = () => {
-  const videoId = basics.videoYT; 
+const Youtube = ({ videoYT }: { videoYT: string }) => {
+  const videoId = videoYT; 
   const isOnline = useOnlineStatus();
 
   if (!isOnline) {

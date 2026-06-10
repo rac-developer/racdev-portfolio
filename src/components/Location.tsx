@@ -1,12 +1,11 @@
 'use client'
 
-import { basics } from "@/database/data.json";
 import AnimatedContainer from "@/components/ui/AnimatedContainer";
 import useAnimatedDelay from "@/hooks/useAnimatedDelay";
 
-const Location = () => {
+const Location = ({ location }: { location: { city: string; countryCode: string } }) => {
   
-  const { city, countryCode } = basics.location;
+  const { city, countryCode } = location;
   const titleDelay = useAnimatedDelay(0.2); 
 
   return (

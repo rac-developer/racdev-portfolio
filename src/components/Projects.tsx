@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { projects } from "@/database/data.json";
 import { ExternalLink, Code2 } from "lucide-react";
 import SeeMore from "./ui/SeeMore";
 import AnimatedTitle from "@/components/ui/AnimatedTitle"
 import useAnimatedDelay from "@/hooks/useAnimatedDelay";
 
-const Projects = () => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Projects = ({ projects }: { projects: any[] }) => {
   const [numToDisplay, setNumToDisplay] = useState(4);
   const titleDelay = useAnimatedDelay(0.5); 
 

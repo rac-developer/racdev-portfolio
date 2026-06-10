@@ -1,9 +1,10 @@
 import React from 'react'
-import { basics } from '@/database/data.json'
+import prisma from '@/database/client'
  
-const Footer = () => {
+const Footer = async () => {
 
-  const url = basics.repoUrl
+  const basics = await prisma.basics.findFirst()
+  const url = basics?.repoUrl || ''
 
   return (
     <footer className='py-1 lg:py-0'>

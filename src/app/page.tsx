@@ -1,136 +1,40 @@
-'use client'
+import prisma from "@/database/client";
+import HomeClient from "@/components/HomeClient";
 
-import { useLayoutEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import About from "@/components/About";
-import CV from "@/components/CV";
-import Education from "@/components/Education";
-import Experience from "@/components/Experience";
-import Location from "@/components/Location";
-import Photo from "@/components/Photo";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
-import SocialMedia from "@/components/SocialMedia";
-import Time from "@/components/Time";
-import Youtube from "@/components/Youtube";
-import AnimatedCard from "@/components/ui/AnimatedCard";
+export const revalidate = 60; // Cache and revalidate every minute if needed
 
-gsap.registerPlugin(ScrollTrigger);
+export default async function Page() {
+  const basics = await prisma.basics.findFirst({
+    include: { profiles: true },
+  });
 
-export default function Home() {
+  const workRaw = await prisma.work.findMany({
+    include: { skills: true },
+  });
   
-  const mainGridRef = useRef<HTMLDivElement | null>(null);
-  const [isDesktop, setIsDesktop] = useState(false);
+  // Transform skills from relation array to string array for the UI components
+  const work = workRaw.map(w => ({
+    ...w,
+    skills: w.skills.map(s => s.name)
+  }))
 
-  const delays = {
-    About: 0,
-    Photo: 0.2,
-    Experience: 0.3,
-    Projects: 0.4,
-    CV: 0.5,
-    Location: 0.6,
-    Time: 0.7,
-    Skills: 0.8,
-    Education: 0.1,
-    Youtube: 0.2,
-    SocialMedia: 0.3,
-  };
+  const projectsRaw = await prisma.project.findMany({
+    include: { skills: true },
+  });
+  
+  const projects = projectsRaw.map(p => ({
+    ...p,
+    skills: p.skills.map(s => s.name)
+  }))
 
-  useLayoutEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1280px)");
-
-    const handleMediaQueryChange = (e: MediaQueryListEvent | MediaQueryList) => {
-      setIsDesktop(e.matches);
-      ScrollTrigger.refresh();
-    };
-
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-    handleMediaQueryChange(mediaQuery);
-
-    gsap.set(mainGridRef.current, { visibility: 'visible' });
-
-    const ctx = gsap.context(() => {
-      ScrollTrigger.matchMedia({
-        "(min-width: 1280px)": function () {
-          if (mainGridRef.current) {
-            mainGridRef.current.style.overflowY = "visible";
-            mainGridRef.current.style.minHeight = "auto";
-            mainGridRef.current.style.height = "auto";
-          }
-        },
-        "(max-width: 1279px)": function () {
-          if (mainGridRef.current) {
-            mainGridRef.current.style.overflowY = "visible"
-            mainGridRef.current.style.minHeight = "0"
-            mainGridRef.current.style.height = "auto"
-          }
-        },
-      });
-    }, mainGridRef)
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-      ctx.revert()
-    };
-  }, []);
-
-  const scrollTriggered = !isDesktop;
+  const education = await prisma.education.findMany();
 
   return (
-    <main className="pt-8 pb-6">
-
-      {/* Grid principal */}
-      <div ref={mainGridRef} className="grid grid-cols-1 gap-4 xl:grid-cols-4 xl:auto-rows-[minmax(130px,auto)] invisible">
-
-        <AnimatedCard delay={delays.About} scrollTriggered={scrollTriggered} className="card-style background-style xl:col-span-3 xl:row-span-1 relative h-full glass-effect">
-          <About />
-        </AnimatedCard>
-
-        <AnimatedCard delay={delays.Photo} scrollTriggered={scrollTriggered} className="card-photo background-style xl:row-span-4 xl:col-start-4 relative h-full glass-effect">
-          <Photo />
-        </AnimatedCard>
-
-        <AnimatedCard delay={delays.Experience} scrollTriggered={scrollTriggered} className="card-style background-style xl:row-span-2 xl:row-start-2 relative h-full glass-effect">
-          <Experience />
-        </AnimatedCard>
-
-        <AnimatedCard delay={delays.Projects} scrollTriggered={scrollTriggered} className="card-style background-style xl:col-span-2 xl:row-span-2 xl:row-start-2 relative h-full glass-effect">
-          <Projects />
-        </AnimatedCard>
-
-        <AnimatedCard delay={delays.CV} scrollTriggered={scrollTriggered} className="card-text background-style xl:row-span-1 xl:col-start-1 xl:row-start-4 relative h-full glass-effect">
-          <CV />
-        </AnimatedCard>
-
-        <AnimatedCard delay={delays.Location} scrollTriggered={scrollTriggered} className="card-text background-style xl:row-span-1 xl:col-start-2 xl:row-start-4 relative h-full glass-effect">
-          <Location />
-        </AnimatedCard>
-
-        <AnimatedCard delay={delays.Time} scrollTriggered={scrollTriggered} className="card-text background-style xl:row-span-1 xl:col-start-3 xl:row-start-4 relative h-full glass-effect">
-          <Time />
-        </AnimatedCard>
-
-        <AnimatedCard delay={delays.Skills} scrollTriggered={scrollTriggered} className="card-style background-style xl:col-span-4 xl:row-start-5 relative h-full glass-effect">
-          <Skills />
-        </AnimatedCard>
-      </div>
-
-      {/* Grid secundario */}
-      <div className="grid grid-cols-1 xl:grid-cols-4 gap-4 mt-4 xl:auto-rows-[minmax(400px,auto)]">
-
-        <AnimatedCard delay={delays.Education} scrollTriggered={true} className="card-style background-style h-full xl:col-span-1 glass-effect">
-          <Education />
-        </AnimatedCard>
-
-        <AnimatedCard delay={delays.Youtube} scrollTriggered={true} className="card-style background-style xl:col-span-2 h-full glass-effect">
-          <Youtube />
-        </AnimatedCard>
-
-        <AnimatedCard delay={delays.SocialMedia} scrollTriggered={true} className="rounded-xl xl:col-span-1 h-full glass-effect">
-          <SocialMedia />
-        </AnimatedCard>
-      </div>
-    </main>
+    <HomeClient
+      basics={basics}
+      work={work}
+      projects={projects}
+      education={education}
+    />
   );
 }

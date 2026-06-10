@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs,
+  SiHtml5, SiCss3, SiTypescript, SiReact, SiNextdotjs,
   SiTailwindcss, SiFigma, SiDocker, SiPython, SiRedux, SiSass,
-  SiPostgresql, SiNodedotjs, SiNestjs, SiGit, SiPrisma, SiVercel
+  SiPostgresql, SiNodedotjs, SiGit
 } from 'react-icons/si';
 import { IoLogoJavascript } from "react-icons/io";
 import { FaJava } from "react-icons/fa";

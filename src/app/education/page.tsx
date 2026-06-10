@@ -1,4 +1,4 @@
-import { education } from "@/database/data.json"
+import prisma from "@/database/client"
 import AnimatedTitle from "@/components/ui/AnimatedTitle"
 
 interface Education {
@@ -8,7 +8,10 @@ interface Education {
   endDate: string | null
 }
 
-export default function page() {
+export const revalidate = 60;
+
+export default async function page() {
+  const education = await prisma.education.findMany();
 
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-auto flex-col px-4 py-8">
