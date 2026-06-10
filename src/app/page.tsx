@@ -10,6 +10,7 @@ export default async function Page() {
 
   const workRaw = await prisma.work.findMany({
     include: { skills: true },
+    orderBy: { order: 'asc' },
   });
   
   // Transform skills from relation array to string array for the UI components
@@ -20,6 +21,7 @@ export default async function Page() {
 
   const projectsRaw = await prisma.project.findMany({
     include: { skills: true },
+    orderBy: { order: 'asc' },
   });
   
   const projects = projectsRaw.map(p => ({
@@ -27,7 +29,9 @@ export default async function Page() {
     skills: p.skills.map(s => s.name)
   }))
 
-  const education = await prisma.education.findMany();
+  const education = await prisma.education.findMany({
+    orderBy: { order: 'asc' }
+  });
 
   return (
     <HomeClient

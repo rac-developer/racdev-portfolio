@@ -5,7 +5,8 @@ export const revalidate = 60;
 
 export default async function Page() {
   const projectsRaw = await prisma.project.findMany({
-    include: { skills: true }
+    include: { skills: true },
+    orderBy: { order: 'asc' }
   });
 
   const projects = projectsRaw.map(p => ({

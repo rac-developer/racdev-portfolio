@@ -15,7 +15,8 @@ export const revalidate = 60;
 
 export default async function page() {
   const workRaw = await prisma.work.findMany({
-    include: { skills: true }
+    include: { skills: true },
+    orderBy: { order: 'asc' }
   });
 
   const work = workRaw.map(w => ({

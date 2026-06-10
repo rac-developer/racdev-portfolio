@@ -14,7 +14,9 @@ const Footer = async () => {
             Desarrollado con
             <span className="font-semibold text-secundary"> Next.js</span>,
             <span className="font-semibold text-secundary"> TypeScript</span>,
-            <span className="font-semibold text-secundary"> GASP</span> y
+            <span className="font-semibold text-secundary"> Prisma</span>,
+            <span className="font-semibold text-secundary"> PostgreSQL</span>,
+            <span className="font-semibold text-secundary"> GASP</span>, y
             <span className="font-semibold text-secundary"> Tailwind CSS</span>.
             <br />
             El código fuente está disponible en{" "}
