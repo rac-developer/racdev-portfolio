@@ -9,9 +9,9 @@ export default async function Page() {
     orderBy: { order: 'asc' }
   });
 
-  const projects = projectsRaw.map(p => ({
+  const projects = projectsRaw.map((p: any) => ({
     ...p,
-    skills: p.skills.map(s => s.name)
+    skills: p.skills.map((s: any) => s.name)
   }))
 
   return <ProjectsClient projects={projects} />;

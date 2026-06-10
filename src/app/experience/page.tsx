@@ -19,9 +19,9 @@ export default async function page() {
     orderBy: { order: 'asc' }
   });
 
-  const work = workRaw.map(w => ({
+  const work = workRaw.map((w: any) => ({
     ...w,
-    skills: w.skills.map(s => s.name)
+    skills: w.skills.map((s: any) => s.name)
   }))
 
   return (
