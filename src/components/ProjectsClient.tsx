@@ -10,8 +10,16 @@ import {
 import SkillBadge from "@/components/ui/SkillBadge";
 import AnimatedTitle from "@/components/ui/AnimatedTitle"
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function ProjectsClient({ projects }: { projects: any[] }) {
+interface Project {
+  name: string,
+  isActive: boolean,
+  url: string,
+  github: string,
+  skills: string[],
+  description: string
+}
+
+export default function ProjectsClient({ projects }: { projects: Project[] }) {
   const [loadingStates, setLoadingStates] = useState<{[key: string]: boolean}>({});
   const [errorStates, setErrorStates] = useState<{[key: string]: boolean}>({});
 
