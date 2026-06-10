@@ -20,7 +20,7 @@ export default async function page() {
       <AnimatedTitle text="Educación" delay={0.1} className="title-subpage text-primary"/>
       <section className="px-4">
         <ol className="relative border-s border-gray-200">
-          {education.map(({ institution, area, startDate, endDate }: Education, idx) => {
+          {education.map(({ institution, area, startDate, endDate }: Education, idx: number) => {
 
             const startYear = new Date(startDate).getFullYear()
             const endYear = endDate ? new Date(endDate).getFullYear() : "Cursando"

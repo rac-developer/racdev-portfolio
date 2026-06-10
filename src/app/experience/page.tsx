@@ -29,7 +29,7 @@ export default async function page() {
       <AnimatedTitle text="Experiencia" delay={0.1} className="title-subpage text-primary"/>
       <section className="px-4">
         <ol className="relative border-s border-gray-200">
-          {work.slice(0, 2).map(({ name, startDate, endDate, position, skills, summary }: Work, idx) => {
+          {work.slice(0, 2).map(({ name, startDate, endDate, position, skills, summary }: Work, idx: number) => {
 
             const startYear = new Date(startDate).getFullYear()
             const endYear = endDate ? new Date(endDate).getFullYear() : "Actualmente"
