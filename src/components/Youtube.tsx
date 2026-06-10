@@ -1,7 +1,21 @@
-import React from 'react'
+'use client'
 
-const Youtube = () => {
-  const videoId = 'dQw4w9WgXcQ'; 
+import React from 'react'
+import { useOnlineStatus } from '@/hooks/useOnlineStatus';
+
+const Youtube = ({ videoYT }: { videoYT: string }) => {
+  const videoId = videoYT; 
+  const isOnline = useOnlineStatus();
+
+  if (!isOnline) {
+    return (
+      <div className="flex items-center justify-center h-full text-center p-4">
+        <p className="text-muted-foreground">
+          No hay conexión a internet para cargar el video.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="relative w-full overflow-hidden rounded-xl pt-[56.25%] xl:pt-0 xl:h-full">

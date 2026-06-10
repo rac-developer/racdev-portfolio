@@ -1,35 +1,59 @@
-import React from 'react'
-import data from '@/database/data.json'
-import SeeMore from './ui/SeeMore'
+'use client'
 
-const Education = () => {
+import { useState, useEffect } from "react";
+import SeeMore from './ui/SeeMore'
+import AnimatedTitle from "@/components/ui/AnimatedTitle"
+import useAnimatedDelay from "@/hooks/useAnimatedDelay";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Education = ({ education }: { education: any[] }) => {
+  const [numToDisplay, setNumToDisplay] = useState(3);
+  const titleDelay = useAnimatedDelay(0.1); 
+ 
+  useEffect(() => {
+    const handleResize = () => {
+      // Muestra 4 proyectos si la pantalla es menor a 1410px
+      if (window.innerWidth < 1500) {
+        setNumToDisplay(2);
+      } else {
+        // Para anchos de 1500px o más, muestra 2. Puedes ajustar esto.
+        setNumToDisplay(2);
+      }
+    };
+ 
+    handleResize(); // Se ejecuta al montar para el estado inicial
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+ 
+  const displayedEducation = education.slice(0, numToDisplay);
+
   return (
-    <div className='flex flex-col h-full relative'>
-      <section className="flex-responsive-center flex-1 overflow-hidden relative">
-        <h2 className="title mb-1">Educación</h2>
-        <ul className="space-y-4">
-          {data.education.slice(0, 3).map(({ institution, area, startDate, endDate }, idx) => {
+    <div className='flex flex-col h-full relative text-white'>
+      <AnimatedTitle scrollTriggered text="Educación" delay={titleDelay} className="title"/>
+      <section className="flex-responsive-center flex-1 overflow-hidden relative px-4">
+        <ol className="relative border-s border-gray-200">
+          {displayedEducation.map(({ institution, area, startDate, endDate }, idx) => {
 
             const startYear = new Date(startDate).getFullYear()
-            const endYear = endDate ? new Date(endDate).getFullYear() : "Actualmente"
+            const endYear = endDate ? new Date(endDate).getFullYear() : "Cursando"
             const years = `${startYear} - ${endYear}`
 
             return (
-              <li key={idx}>
-                <article>
-                  <h3 className="text-lg font-medium capitalize tracking-tight">{institution}</h3>
-                  <h4 className="text-gray-400 capitalize">{area}</h4>
-                  <time className="text-md text-gray-500">{years}</time>
-                </article>
+              <li key={idx} className="mb-10 ms-4 last:mb-0">
+                <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-gray-200 bg-gray-200" />
+                <time className="mb-1 text-sm font-normal leading-none text-gray-400">{years}</time>
+                <h3 className="text-lg font-semibold text-white">{institution}</h3>
+                <h4 className="text-base font-normal text-gray-400">{area}</h4>
               </li>
             )
           })}
-        </ul>
+        </ol>
         
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-30 bg-gradient-to-t from-background/80 to-transparent"/>
       </section>
       
-      <div className="relative z-10 mt-auto pt-4 bg-background/80 backdrop-blur-sm">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 " />
+      <div className="relative z-10 mt-auto pt-4">
         <SeeMore link='/education'/>
       </div>
     </div>

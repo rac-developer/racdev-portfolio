@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-   images: {
-    domains: ['screenshot.abstractapi.com', 'api.microlink.io'],
+  images: {
     remotePatterns: [
       {
         protocol: 'https',
@@ -14,9 +13,16 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '**.netlify.app',
+        hostname: '*.netlify.app',
       },
-      // Agrega otros dominios que necesites
+      {
+        protocol: 'https',
+        hostname: 'www.youtube.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com', // Para las miniaturas de YouTube
+      },
     ],
   },
 };

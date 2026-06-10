@@ -1,10 +1,10 @@
 import React from 'react'
 import { FaYoutube, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import data from '@/database/data.json'
 
-const SocialMedia = () => {
-  const colorText = 'text-gray-500 dark:text-gray-400 hover:text-secundary transition-colors'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const SocialMedia = ({ profiles }: { profiles: any[] }) => {
+  const colorText = 'text-gray-500 hover:text-secundary transition-colors'
 
   const iconMap: { [key: string]: React.ElementType } = {
     'X': FaXTwitter,
@@ -13,7 +13,7 @@ const SocialMedia = () => {
     'GitHub': FaGithub,
   };
 
-  const socialLinks = data.basics.profiles.map(profile => ({
+  const socialLinks = profiles.map(profile => ({
     name: profile.network,
     url: profile.url,
     icon: iconMap[profile.network],
@@ -21,7 +21,7 @@ const SocialMedia = () => {
   })).filter(link => link.icon);
   
   return (
-    <div className="grid h-full w-full grid-cols-2 items-center justify-items-center gap-4">
+    <div className="grid h-full w-full grid-cols-1 items-center justify-items-center gap-4 sm:grid-cols-2">
       {socialLinks.map((link) => {
 
         const Icon = link.icon;
@@ -36,7 +36,7 @@ const SocialMedia = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.name}
-              className={`flex items-center justify-center transition-transform hover:scale-110 ${link.color} !bg-transparent`}
+              className={`flex flex-col items-center justify-center transition-transform hover:scale-110 ${link.color} !bg-transparent`}
             >
               <Icon className="text-5xl" />
             </a>

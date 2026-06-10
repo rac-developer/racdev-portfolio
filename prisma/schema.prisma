@@ -1,0 +1,149 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+}
+
+model Basics {
+  id          Int       @id @default(1)
+  name        String
+  layout      String
+  label       String
+  // image       String
+  email       String
+  phone       String
+  videoYT     String
+  url         String
+  repoUrl     String
+  cv          String
+  summary     String
+  
+  // Location
+  postalCode  String
+  city        String
+  countryCode String
+  region      String
+  
+  profiles    Profile[]
+}
+
+model Profile {
+  id        Int      @id @default(autoincrement())
+  network   String
+  username  String
+  url       String
+  basicsId  Int
+  basics    Basics   @relation(fields: [basicsId], references: [id], onDelete: Cascade)
+}
+
+model Work {
+  id          Int      @id @default(autoincrement())
+  name        String
+  position    String
+  url         String
+  startDate   String
+  endDate     String?
+  description String
+  summary     String[]
+  highlights  String[]
+  skills      Skill[]  @relation("WorkSkills")
+  order       Int      @default(0)
+}
+
+model Education {
+  id          Int      @id @default(autoincrement())
+  institution String
+  url         String
+  area        String
+  studyType   String
+  startDate   String
+  endDate     String?
+  score       String
+  courses     String[]
+  order       Int      @default(0)
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  name        String
+  github      String
+  isActive    Boolean
+  up          String?
+  startDate   String?
+  endDate     String?
+  description String
+  url         String
+  image       String
+  skills      Skill[]  @relation("ProjectSkills")
+  order       Int      @default(0)
+}
+
+model SkillGroup {
+  id        Int      @id @default(autoincrement())
+  name      String
+  level     String
+  keywords  String[]
+}
+
+model Skill {
+  id        Int       @id @default(autoincrement())
+  name      String    @unique
+  works     Work[]    @relation("WorkSkills")
+  projects  Project[] @relation("ProjectSkills")
+}
+
+model Volunteer {
+  id           Int      @id @default(autoincrement())
+  organization String
+  position     String
+  url          String
+  startDate    String
+  endDate      String?
+  summary      String
+  highlights   String[]
+}
+
+model Award {
+  id          Int      @id @default(autoincrement())
+  title       String
+  date        String
+  awarder     String
+  summary     String
+}
+
+model Certificate {
+  id          Int      @id @default(autoincrement())
+  name        String
+  date        String
+  issuer      String
+  url         String
+}
+
+model Publication {
+  id          Int      @id @default(autoincrement())
+  name        String
+  publisher   String
+  releaseDate String
+  url         String
+  summary     String
+}
+
+model Language {
+  id        Int      @id @default(autoincrement())
+  language  String
+  fluency   String
+}
+
+model Interest {
+  id        Int      @id @default(autoincrement())
+  name      String
+  keywords  String[]
+}
+
+model Reference {
+  id        Int      @id @default(autoincrement())
+  name      String
+  reference String
+}
